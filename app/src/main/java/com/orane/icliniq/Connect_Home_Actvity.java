@@ -312,7 +312,8 @@ public class Connect_Home_Actvity extends AppCompatActivity {
                                 case "My Hospitals":
                                     startActivity(new Intent(Connect_Home_Actvity.this, Connect_hosp_list.class));
                                     break;
-                                case "":
+                                case "nav_family":
+                                    startActivity(new Intent(Connect_Home_Actvity.this, FamilyProfileListActivity.class));
 
                                     break;
                                 case "Logout":

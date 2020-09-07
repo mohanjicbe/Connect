@@ -176,7 +176,7 @@ public class QueryActivity extends AppCompatActivity implements ObservableScroll
                 Model.query_cache = "";
                 Model.upload_files = "";
 
-                Intent intent = new Intent(QueryActivity.this, AskQuery1.class);
+                Intent intent = new Intent(QueryActivity.this, DoctorsListActivity.class);
                 startActivity(intent);
             }
         });

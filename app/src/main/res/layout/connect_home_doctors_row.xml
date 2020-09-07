@@ -8,7 +8,6 @@
     android:background="@color/grey_200">
 
     <LinearLayout
-
         android:id="@+id/full_layout"
         android:layout_width="300dp"
         android:onClick="onClick_consult_button"
@@ -120,6 +119,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:layout_gravity="bottom"
                             android:layout_marginTop="5dp"
                             android:orientation="horizontal">
 
