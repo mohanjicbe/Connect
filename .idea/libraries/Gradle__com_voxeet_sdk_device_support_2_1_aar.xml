@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.voxeet.sdk:device_support:2.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a72ca17993437a3123537cfb52b5fb43/jetified-device_support-2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a72ca17993437a3123537cfb52b5fb43/jetified-device_support-2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a72ca17993437a3123537cfb52b5fb43/jetified-device_support-2.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/device_support/2.1/a80c3984969f71f5b99c65d18ecdda46ad9f9a2f/device_support-2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/device_support/2.1/aa9fb3ae47478c6193c1ce8395a155ba4a3d2d02/device_support-2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

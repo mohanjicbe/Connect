@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@mipmap/toolbar_bg"
+            android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="3dp"
+                card_view:contentPadding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageview_poster"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/video_cons_ico_color" />
+
+                        <com.skyfishjy.library.RippleBackground
+                            android:id="@+id/content"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:visibility="gone"
+                            app:rb_color="@color/blue_300"
+                            app:rb_duration="3000"
+                            app:rb_radius="10dp"
+                            app:rb_rippleAmount="4"
+                            app:rb_scale="6">
+
+                        </com.skyfishjy.library.RippleBackground>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:gravity="center_vertical|left"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_schedule"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Schedule"
+                                    android:textColor="@color/mds_bluegrey_800"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dip"
+                                    android:layout_marginTop="3dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@mipmap/black_line" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_date_lab"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Date: "
+                                        android:textColor="@color/grey_900"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvdate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="10/10/2016"
+                                        android:textColor="@color/mds_bluegrey_800"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_time_lab"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Time: "
+                                        android:textColor="@color/grey_900"
+                                        android:textSize="15sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvtime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="01:30 PM"
+                                        android:textColor="@color/mds_bluegrey_800"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/line1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical|left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical|left"
+                    android:text="Status:"
+                    android:textColor="@color/grey_900"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical|left"
+                    android:text="Date:"
+                    android:textColor="@color/red_900"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/black_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_timezone_lab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="TimeZone:"
+                        android:textColor="@color/grey_900"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvtz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Date:"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center_vertical|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_lang_lab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Language:"
+                        android:textColor="@color/grey_900"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvlang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Date:"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_attach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/blue_border_button"
+                    android:elevation="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:text="Attach Files/Images"
+                    android:textAllCaps="false"
+                    android:textColor="@color/app_color" />
+
+                <LinearLayout
+                    android:id="@+id/expand_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_query_lab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Query: "
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginTop="3dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/black_line" />
+
+                    <TextView
+                        android:id="@+id/tvquery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Helping several thousands of users everyday with health issues from Psychiatry, Radiology, Dermatology, OB/GYN, Oncology and 80+ other specialities."
+                        android:textColor="@color/grey_900"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <com.github.ksoichiro.android.observablescrollview.ObservableWebView
+                        android:id="@+id/webview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/appBarLayout" />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginTop="7dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/black_line"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/blue_50"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="10dp"
+                    android:text="You will be notified via SMS, App Notification and E-mail once the doctor confirm the consultation."
+                    android:textColor="@color/blue_800"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

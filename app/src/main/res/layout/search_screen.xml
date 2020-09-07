@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/titlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/layout_border_grey_square"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:elevation="1dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/leftback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/left_arrow_black" />
+
+            <EditText
+                android:id="@+id/edt_searchword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_toLeftOf="@+id/img_search"
+                android:layout_toRightOf="@+id/leftback"
+                android:background="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:hint="Search a Health issue, doctors, articles, Q&amp;A"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="6dp"
+                android:textColor="@color/mds_bluegrey_700"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/search_icon_grey"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/delete_ico"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:padding="7dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/delete_icon_grey"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlayout"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0.0dip"
+        android:footerDividersEnabled="true"
+        android:visibility="gone"
+        tools:listitem="@layout/search_row" />
+
+    <LinearLayout
+        android:id="@+id/first_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlayout"
+        android:layout_marginTop="20dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/search_grey"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="Search a health issue"
+                android:textColor="@color/grey_600"
+                android:textSize="17sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Search for an article, answer or a doctor"
+                android:textColor="@color/grey_500"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_topsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:text="Top Searches"
+            android:textColor="@color/mds_bluegrey_600"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/tag_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/search_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical">
+
+                  <!--  <co.lujun.androidtagview.TagContainerLayout
+                        android:id="@+id/tagcontainerLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:scrollbarAlwaysDrawHorizontalTrack="true"
+                        app:container_background_color="#00000000"
+                        app:container_border_radius="10dp"
+                        app:container_border_width="0dp"
+                        app:container_enable_drag="true"
+                        app:horizontal_interval="10dp"
+                        app:tag_clickable="true"
+                        app:tag_theme="random"
+                        app:vertical_interval="10dp" />-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/findmore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif"
+                            android:padding="5dp"
+                            android:text="Top specialities "
+                            android:textColor="@color/mds_bluegrey_600"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="sans-serif-light"
+                            android:padding="5dp"
+                            android:text="More"
+                            android:textColor="@color/mds_bluegrey_900"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:id="@+id/tableRow1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp">
+
+                            <LinearLayout
+                                android:id="@+id/b1_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:onClick="onlayoutclick"
+                                android:orientation="vertical"
+                                android:padding="5dip">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:src="@mipmap/gyneocology_icon" />
+
+                                        <TextView
+                                            android:id="@+id/tv_gridtext1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="Gynaecology"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/app_color"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/b2_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:onClick="onlayoutclick"
+                                android:orientation="vertical"
+                                android:padding="5dip">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:src="@mipmap/demot_icon" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_gridtext2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="Dermatology"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/app_color"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/tvcons"
+                                        android:layout_width="25dip"
+                                        android:layout_height="25dip"
+                                        android:layout_gravity="top|right"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@drawable/circle_tv"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/b3_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:onClick="onlayoutclick"
+                                android:orientation="vertical"
+                                android:padding="5dip">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:src="@mipmap/genmedicine_icon" />
+
+                                        <TextView
+                                            android:id="@+id/tv_gridtext3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="general"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/app_color"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/tv_icon_newc"
+                                        android:layout_width="25dip"
+                                        android:layout_height="25dip"
+                                        android:layout_gravity="top|right"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@drawable/circle_tv"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/b0_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="?android:attr/selectableItemBackground"
+                                android:gravity="center"
+                                android:onClick="onlayoutclick"
+                                android:orientation="vertical"
+                                android:padding="5dip">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="60dp"
+                                            android:layout_height="60dp"
+                                            android:src="@mipmap/gyn_icon" />
+
+                                        <TextView
+                                            android:id="@+id/tv_gridtext0"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="Sexology"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/app_color"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+                            </LinearLayout>
+
+                        </TableRow>
+                    </TableLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:id="@+id/layout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@mipmap/genmedicine_icon" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/cat_tit1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Doctors"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/mds_bluegrey_600"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/cat_desc1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Gynaecology, Dermatology, Cardiology etc.."
+                                    android:textColor="@color/mds_bluegrey_500"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/layout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@mipmap/card_icon" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/cat_tit2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Queries and Answers"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/mds_bluegrey_600"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/cat_desc2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Prioritised Patients queries and its answers"
+                                    android:textColor="@color/mds_bluegrey_500"
+                                    android:textSize="12sp" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/layout3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@mipmap/gyneocology_icon" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/cat_tit3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Articles"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/mds_bluegrey_600"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/cat_desc3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="The spiciality wise articles writtern by doctors"
+                                    android:textColor="@color/mds_bluegrey_500"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_recent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="sans-serif"
+                            android:padding="5dp"
+                            android:text="Latest Queries"
+                            android:textAllCaps="true"
+                            android:textColor="@color/mds_bluegrey_600"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_viewall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="VIEW ALL"
+                            android:textColor="@color/app_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+
+                    <HorizontalScrollView
+                        android:id="@+id/hsv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/mds_bluegrey_50"
+                        android:fillViewport="true"
+                        android:measureAllChildren="false"
+                        android:scrollbars="none"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/innerLay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="0dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true"
+                                    card_view:cardCornerRadius="3dp"
+                                    card_view:contentPadding="5dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="?android:attr/selectableItemBackground"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <de.hdodenhof.circleimageview.CircleImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_marginRight="15dp"
+                                                android:src="@mipmap/alok" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:fontFamily="sans-serif"
+                                                    android:maxLines="2"
+                                                    android:text="Query Title Add the dependency (available from mavenCentral and Add the dependency (available from mavenCentral and"
+                                                    android:textColor="@color/mds_bluegrey_800"
+                                                    android:textSize="15sp"
+                                                    android:textStyle="bold"
+                                                    android:visibility="visible" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:ellipsize="end"
+                                                    android:fontFamily="sans-serif"
+                                                    android:maxLines="2"
+                                                    android:text="Short Title You can use any FAB library as long as it implements "
+                                                    android:textColor="@color/mds_bluegrey_700"
+                                                    android:textSize="13sp" />
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.4dip"
+                                            android:layout_marginTop="7dp"
+                                            android:background="@color/mds_bluegrey_100"
+                                            android:visibility="gone" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp">
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:padding="8dp"
+                                                android:visibility="gone">
+
+                                                <ImageView
+                                                    android:layout_width="20dp"
+                                                    android:layout_height="20dp"
+                                                    android:src="@mipmap/share_grey"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginLeft="3dp"
+                                                    android:fontFamily="sans-serif"
+                                                    android:gravity="center_vertical"
+                                                    android:text="Share"
+                                                    android:textColor="@color/mds_bluegrey_600"
+                                                    android:textStyle="normal"
+                                                    android:visibility="gone" />
+
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="2dp"
+                                                    android:layout_weight="1"
+                                                    android:ellipsize="end"
+                                                    android:fontFamily="sans-serif-light"
+                                                    android:maxLines="1"
+                                                    android:text="Speciality : Internal Medicines"
+                                                    android:textColor="@color/red_800"
+                                                    android:textStyle="bold"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="2dp"
+                                                    android:layout_weight="1"
+                                                    android:ellipsize="end"
+                                                    android:fontFamily="sans-serif-light"
+                                                    android:maxLines="1"
+                                                    android:text="Speciality : Internal Medicines"
+                                                    android:textColor="@color/red_800"
+                                                    android:textStyle="bold"
+                                                    android:visibility="gone" />
+
+
+                                            </LinearLayout>
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentLeft="true"
+                                                android:layout_marginLeft="05dp"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif"
+                                                android:maxLines="1"
+                                                android:text="Internal Medicines"
+                                                android:textColor="@color/mds_bluegrey_800"
+                                                android:textStyle="normal" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_centerVertical="true"
+                                                android:background="@drawable/doctor_green"
+                                                android:fontFamily="sans-serif"
+                                                android:gravity="center_horizontal|center_vertical"
+                                                android:paddingLeft="8dp"
+                                                android:paddingTop="1dp"
+                                                android:paddingRight="8dp"
+                                                android:paddingBottom="1dp"
+                                                android:text="Article"
+                                                android:textColor="@color/white"
+                                                android:textSize="13sp"
+                                                android:textStyle="bold"
+                                                android:visibility="visible" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true"
+                                    card_view:cardCornerRadius="3dp"
+                                    card_view:contentPadding="5dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="?android:attr/selectableItemBackground"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <de.hdodenhof.circleimageview.CircleImageView
+                                                android:id="@+id/imageview_poster"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_marginRight="15dp"
+                                                android:src="@mipmap/alok" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/textview_title"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:fontFamily="sans-serif"
+                                                    android:maxLines="2"
+                                                    android:text="Query Title Add the dependency (available from mavenCentral and Add the dependency (available from mavenCentral and"
+                                                    android:textColor="@color/mds_bluegrey_800"
+                                                    android:textSize="15sp"
+                                                    android:textStyle="bold"
+                                                    android:visibility="visible" />
+
+                                                <TextView
+                                                    android:id="@+id/textview_short"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:ellipsize="end"
+                                                    android:fontFamily="sans-serif"
+                                                    android:maxLines="2"
+                                                    android:text="Short Title You can use any FAB library as long as it implements "
+                                                    android:textColor="@color/mds_bluegrey_700"
+                                                    android:textSize="13sp" />
+
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0.4dip"
+                                            android:layout_marginTop="7dp"
+                                            android:background="@color/mds_bluegrey_100"
+                                            android:visibility="gone" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp">
+
+                                            <LinearLayout
+                                                android:id="@+id/share_layout"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:padding="8dp"
+                                                android:visibility="gone">
+
+                                                <ImageView
+                                                    android:layout_width="20dp"
+                                                    android:layout_height="20dp"
+                                                    android:src="@mipmap/share_grey"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:layout_marginLeft="3dp"
+                                                    android:fontFamily="sans-serif"
+                                                    android:gravity="center_vertical"
+                                                    android:text="Share"
+                                                    android:textColor="@color/mds_bluegrey_600"
+                                                    android:textStyle="normal"
+                                                    android:visibility="gone" />
+
+
+                                                <TextView
+                                                    android:id="@+id/tv_url"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="2dp"
+                                                    android:layout_weight="1"
+                                                    android:ellipsize="end"
+                                                    android:fontFamily="sans-serif-light"
+                                                    android:maxLines="1"
+                                                    android:text="Speciality : Internal Medicines"
+                                                    android:textColor="@color/red_800"
+                                                    android:textStyle="bold"
+                                                    android:visibility="gone" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_docid"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="2dp"
+                                                    android:layout_weight="1"
+                                                    android:ellipsize="end"
+                                                    android:fontFamily="sans-serif-light"
+                                                    android:maxLines="1"
+                                                    android:text="Speciality : Internal Medicines"
+                                                    android:textColor="@color/red_800"
+                                                    android:textStyle="bold"
+                                                    android:visibility="gone" />
+
+                                            </LinearLayout>
+
+                                            <TextView
+                                                android:id="@+id/textview_speciality"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentLeft="true"
+                                                android:layout_marginLeft="05dp"
+                                                android:layout_toLeftOf="@+id/textview_ctype"
+                                                android:layout_toRightOf="@+id/share_layout"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif"
+                                                android:maxLines="1"
+                                                android:text="Internal Medicines"
+                                                android:textColor="@color/mds_bluegrey_800"
+                                                android:textStyle="normal" />
+
+                                            <TextView
+                                                android:id="@+id/textview_ctype"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_centerVertical="true"
+                                                android:background="@drawable/doctor_green"
+                                                android:fontFamily="sans-serif"
+                                                android:gravity="center_horizontal|center_vertical"
+                                                android:paddingLeft="8dp"
+                                                android:paddingTop="1dp"
+                                                android:paddingRight="8dp"
+                                                android:paddingBottom="1dp"
+                                                android:text="Article"
+                                                android:textColor="@color/white"
+                                                android:textSize="13sp"
+                                                android:textStyle="bold"
+                                                android:visibility="visible" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/emptybin" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="No matching results found"
+            android:textColor="@color/grey_500"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Please modify your search criteria and try again"
+            android:textColor="@color/grey_500"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_color"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2"
+            android:fontFamily="sans-serif-light"
+            android:text="Have a Question?"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnask"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_login_orange"
+            android:fontFamily="sans-serif-light"
+            android:text="Ask a Doctor"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnsignup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded"
+            android:fontFamily="sans-serif-light"
+            android:text="Sign up"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="@drawable/button_login_orange"
+            android:fontFamily="sans-serif-light"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/fab"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:layout_margin="@dimen/fab_margin"
+         android:clickable="true"
+         android:src="@mipmap/ask"
+         app:layout_anchor="@id/parent_layout"
+         app:layout_anchorGravity="bottom|right|end" />-->
+
+    <!--  <com.github.clans.fab.FloatingActionMenu
+          android:id="@+id/menu_red"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:paddingBottom="10dp"
+          android:paddingLeft="10dp"
+          android:paddingRight="10dp"
+          android:visibility="gone"
+          app:menu_icon="@mipmap/feedback"
+          fab:menu_backgroundColor="#ccffffff"
+          fab:menu_labels_ellipsize="end"
+          fab:menu_labels_singleLine="true">
+
+          <com.github.clans.fab.FloatingActionButton
+              android:id="@+id/fab_askquery"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@mipmap/askquery_ico"
+              fab:fab_label="Ask Query"
+              fab:fab_size="mini" />
+
+          <com.github.clans.fab.FloatingActionButton
+              android:id="@+id/fab_phone"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@mipmap/phone_cons_white_ico"
+              fab:fab_label="Book Phone Consultation"
+              fab:fab_size="mini" />
+
+          <com.github.clans.fab.FloatingActionButton
+              android:id="@+id/fab_video"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@mipmap/video_cons_white_icon"
+              fab:fab_label="Book Video Consultation"
+              fab:fab_size="mini" />
+
+      </com.github.clans.fab.FloatingActionMenu>-->
+
+</RelativeLayout>

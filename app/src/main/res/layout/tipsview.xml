@@ -1,0 +1,440 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="32dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/left_bak_white" />
+
+        <TextView
+            android:id="@+id/tv_tb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_close"
+            android:fontFamily="sans-serif-medium"
+            android:text="Article"
+            android:textColor="@color/grey_400"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="SHARE"
+            android:textColor="@color/grey_400"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/img_banner"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="0dp"
+                android:contentDescription="image"
+                android:scaleType="fitXY"
+                android:src="@mipmap/tips_banner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/like_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/img_share"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:src="@mipmap/like_grey_new" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="2dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center_vertical"
+                            android:text="Like"
+                            android:textColor="@color/mds_bluegrey_700"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Human Papilloma Virus - HPV Vaccine"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/tv_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="2sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text=""
+                    android:textColor="@color/mds_bluegrey_700"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_abstract"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="largest community of verified doctors. Over 50,000 doctors from 300+ cities are using Curofy to discuss"
+                    android:textColor="@color/mds_bluegrey_900"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+
+                <LinearLayout
+                    android:id="@+id/doctor_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@color/grey_10"
+                    android:elevation="2dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/doc_photo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="3dp"
+                        android:src="@mipmap/doctor_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_doc_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif"
+                            android:textAllCaps="true"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_docname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif"
+                            android:text="Doctor Name"
+                            android:textAllCaps="true"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_docedu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="1dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif"
+                            android:text="Education"
+                            android:textAllCaps="true"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tv_docsp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="3dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textAllCaps="true"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="10sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="sans-serif"
+                    android:text="October'25, 2016"
+                    android:textAllCaps="true"
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif"
+                    android:linksClickable="true"
+                    android:text="The clinical image (attachment removed to protect patient identity) is suggestive of a superficial scald, which is a minor burn injury. It seems pretty clean and uninfected. As it heals, there can be a bit of burning and "
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <com.github.ksoichiro.android.observablescrollview.ObservableWebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/appBarLayout" />
+
+                <!--
+
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <com.orane.icliniq.richtextview.RichContentView
+                                        android:id="@+id/richTextView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                </ScrollView>
+                -->
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/feedback_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Is this article helpful? "
+                    android:textColor="@color/mds_bluegrey_600"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_yes"
+                    android:layout_width="40dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_yes"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Yes"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_no"
+                    android:layout_width="40dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/button_no"
+                    android:fontFamily="sans-serif-light"
+                    android:linksClickable="true"
+                    android:text="No"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/recome_parentlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/layout_rounded_corner"
+                android:elevation="15dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_reccom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+                    android:text="Recommended to You"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/grey_300"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/reccom_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/layout_rounded"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/search_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_rounded"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:hint="Search a Health Issue"
+                        android:inputType="textWebEditText"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textSize="15sp" />
+
+
+                    <ImageView
+                        android:id="@+id/img_search_hit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/img_rounded"
+                        android:padding="5dp"
+                        android:paddingLeft="2dp"
+                        android:src="@mipmap/search_icon" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/invoice_button_rounded">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center_horizontal"
+            android:text="Ask a Doctor Online"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>

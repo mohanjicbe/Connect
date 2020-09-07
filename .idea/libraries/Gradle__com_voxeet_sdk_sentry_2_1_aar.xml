@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.voxeet.sdk:sentry:2.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3914339829075bc05af52f15cc68109e/jetified-sentry-2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3914339829075bc05af52f15cc68109e/jetified-sentry-2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3914339829075bc05af52f15cc68109e/jetified-sentry-2.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/sentry/2.1/2b399ee468b0baf28abcb7d5c1607fbd8c81a26c/sentry-2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/sentry/2.1/b27c9acb8aaa5141d327432eb9cad53ed1ee1ce5/sentry-2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

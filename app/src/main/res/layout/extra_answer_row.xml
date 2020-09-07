@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_ext_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="sans-serif-light"
+        android:text="More details about the presenting complaint:"
+        android:textColor="@color/mds_bluegrey_800"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_ext_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:autoLink="all"
+        android:fontFamily="sans-serif-light"
+        android:linksClickable="false"
+        android:paddingLeft="15dp"
+        android:clickable="true"
+        android:paddingRight="10dp"
+        android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+        android:textColor="@color/mds_bluegrey_900"
+        android:textSize="15sp" />
+
+</LinearLayout>

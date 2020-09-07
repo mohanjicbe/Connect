@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.voxeet.sdk:telemetry:2.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13f559663d3e5ef7937bc031a97f31df/jetified-telemetry-2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13f559663d3e5ef7937bc031a97f31df/jetified-telemetry-2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13f559663d3e5ef7937bc031a97f31df/jetified-telemetry-2.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/telemetry/2.1/63f11a8e458c7be578a4ac739281515db9aa23fd/telemetry-2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/telemetry/2.1/c60053f0ff1931350e16a3affbfc7cd82edf2e39/telemetry-2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

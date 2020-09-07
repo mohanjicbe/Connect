@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/olay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_300"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        app:cardElevation="5dp"
+        card_view:cardCornerRadius="3dp"
+        card_view:contentPadding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/offer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/left_layout"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_sym"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif-light"
+                                android:text="$"
+                                android:textColor="@color/app_color"
+                                android:textSize="25dp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/tv_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/tv_sym"
+                                android:fontFamily="sans-serif"
+                                android:text="45"
+                                android:textColor="@color/app_color"
+                                android:textSize="45dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_deci"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_toRightOf="@+id/tv_price"
+                                android:fontFamily="sans-serif-light"
+                                android:text="99"
+                                android:textColor="@color/app_color"
+                                android:textSize="22dp" />
+
+                            <TextView
+                                android:id="@+id/tv_month"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:layout_toRightOf="@+id/tv_deci"
+                                android:fontFamily="sans-serif-light"
+                                android:text="/m"
+                                android:textColor="@color/app_color"
+                                android:textSize="15dp"
+                                android:textStyle="normal" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/left_layout"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/offer_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical|left"
+                            android:text="Monthly Plan"
+                            android:textColor="@color/mds_bluegrey_700"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/offer_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_marginTop="7dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical|left"
+                            android:text="Get unlimited queries and billed Monthly"
+                            android:textColor="@color/mds_bluegrey_700"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvoid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="10dp"
+                            android:text="on every transaction"
+                            android:textColor="@color/grey_900"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_submit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/button_rounded"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Select Plan"
+                            android:visibility="gone"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

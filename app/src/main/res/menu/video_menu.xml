@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_myfavvideo"
+        android:icon="@mipmap/fav_video_icon"
+        android:iconTint="@color/white"
+        android:orderInCategory="100"
+        android:title="Doctors"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_video_gall"
+        android:icon="@mipmap/video_gall_icon"
+        android:orderInCategory="100"
+        android:iconTint="@color/white"
+        android:title="Doctors"
+        app:showAsAction="always" />
+
+</menu>

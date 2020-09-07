@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="180dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/full_layout"
+        android:layout_width="180dp"
+        android:elevation="10dp"
+        android:background="@drawable/offer_rounded_new"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_offer_id"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_offer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="Half Yearly Plan"
+                android:textColor="@color/mds_bluegrey_900"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/offer_img"
+                android:layout_width="75dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/offer_doc_img"
+                android:layout_height="70dp" />
+
+
+            <TextView
+                android:id="@+id/tv_offer_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="Half Yearly Plan"
+                android:textColor="@color/mds_bluegrey_900"
+                android:textSize="12sp" />
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:elevation="10dp"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:onClick="offer_submit_press"
+                android:text="Get this"
+                android:visibility="visible"
+                android:textAllCaps="false"
+                android:textColor="@color/blue_800"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

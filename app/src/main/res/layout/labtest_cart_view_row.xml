@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/list_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_textname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="7dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="2"
+                        android:text="SAF Reprint Ink Painting"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_testlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="1"
+                        android:text="2 Ltr Can"
+                        android:textColor="@color/mds_bluegrey_500"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_vendor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/tv_newprice"
+                            android:background="@drawable/labtest_vendor_rounded"
+                            android:fontFamily="sans-serif"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Thyrocare"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:id="@+id/tv_oldprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/tv_newprice"
+                            android:fontFamily="sans-serif"
+                            android:text="499"
+                            android:textColor="@color/mds_bluegrey_500"
+                            android:textSize="13dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_newprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Rs. 399"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_offertext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="1"
+                    android:text="10% Offer"
+                    android:textColor="@color/app_color"
+                    android:textSize="12dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_plus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/grey_border_button"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textColor="@color/app_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_qty_value"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toLeftOf="@+id/tv_plus"
+                    android:background="@drawable/blue_border_button"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_minus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toLeftOf="@+id/tv_qty_value"
+                    android:background="@drawable/grey_border_button"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@color/app_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_gravity="center_vertical"
+                     android:layout_marginLeft="10dp"
+                     android:layout_marginRight="5dp"
+                     android:layout_toLeftOf="@+id/spinner_qty"
+                     android:fontFamily="sans-serif"
+                     android:text="Qty: "
+                     android:textColor="@color/mds_bluegrey_800"
+                     android:textSize="13dp" />
+
+                 <Spinner
+                     android:id="@+id/spinner_qty"
+                     android:layout_width="70dp"
+                     android:layout_height="40dp"
+                     android:layout_alignParentRight="true"
+                     android:textSize="15sp" />-->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/wish_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/grey_border_button"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/wigh_icon1"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@mipmap/fav_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/wigh_icon1"
+                            android:fontFamily="sans-serif"
+                            android:text="Move to Wishlist"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/remove_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/grey_border_button"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/wigh_icon2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@mipmap/remove"
+                            android:tint="@color/grey_700" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/wigh_icon2"
+                            android:fontFamily="sans-serif"
+                            android:text="Remove"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_closebutton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right|top"
+            android:layout_margin="1dp"
+            android:padding="3dp"
+            android:src="@mipmap/close_icon" />
+
+    </FrameLayout>
+
+</LinearLayout>

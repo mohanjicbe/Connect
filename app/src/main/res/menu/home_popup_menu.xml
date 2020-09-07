@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_edit_profile"
+        android:orderInCategory="100"
+        android:title="Edit Profile"
+        android:visible="true"
+        android:icon="@mipmap/attach_ico_white"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_mywallet"
+        android:orderInCategory="100"
+        android:title="My Wallet"
+        android:icon="@mipmap/attach_ico_white"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/nav_myhospitals"
+        android:orderInCategory="100"
+        android:title="My Hospitals"
+        android:visible="true"
+        android:icon="@mipmap/attach_ico_white"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/nav_family"
+        android:orderInCategory="100"
+        android:title="My Family"
+        android:visible="true"
+        android:icon="@mipmap/attach_ico_white"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/nav_logout"
+        android:orderInCategory="100"
+        android:title="Logout"
+        android:visible="true"
+        android:icon="@mipmap/attach_ico_white"
+        app:showAsAction="always" />
+
+</menu>

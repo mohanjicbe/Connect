@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@mipmap/toolbar_bg"
+            android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="Specialities"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/toolbar_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="CLEAR FILTER"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/search_grey"
+            android:tint="@color/app_color" />
+
+        <EditText
+            android:id="@+id/myFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Enter Speciality to Search"
+            android:maxLines="1"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="normal">
+
+        </EditText>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/icon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical|center"
+            android:text="Select a speciality"
+            android:textColor="@color/app_color"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:id="@+id/b1_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/gyneocology_icon" />
+
+                            <TextView
+                                android:id="@+id/tv_gridtext1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Gynaecology"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/b2_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/demot_icon" />
+
+
+                            <TextView
+                                android:id="@+id/tv_gridtext2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Dermatology"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvcons"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_gravity="top|right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/circle_tv"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b3_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/genmedicine_icon" />
+
+
+                            <TextView
+                                android:id="@+id/tv_gridtext3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="general"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_icon_newc"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_gravity="top|right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/circle_tv"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:id="@+id/b4_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/gyn_icon" />
+
+                            <TextView
+                                android:id="@+id/tv_gridtext4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Sexology"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_gravity="top|right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/circle_tv"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b5_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/hiv_icon" />
+
+
+                            <TextView
+                                android:id="@+id/tv_gridtext5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="H.I.V"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_gravity="top|right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/circle_tv"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b6_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/dentist_icon" />
+
+
+                            <TextView
+                                android:id="@+id/tv_gridtext6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Dentistry"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_gravity="top|right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/circle_tv"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:id="@+id/b7_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/psychrist_icon" />
+
+                            <TextView
+                                android:id="@+id/tv_gridtext7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="psychology"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:layout_gravity="top|right"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/circle_tv"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b8_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/pedia_icon" />
+
+
+                            <TextView
+                                android:id="@+id/tv_gridtext8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Pediatrics"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b9_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:elevation="10dp"
+                    android:onClick="onlayoutclick"
+                    android:orientation="vertical"
+                    android:padding="5dip">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@mipmap/card_icon" />
+
+
+                            <TextView
+                                android:id="@+id/tv_gridtext9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Cardiology"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="15sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+
+        <Button
+            android:id="@+id/btn_viewall"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/button_rounded"
+            android:gravity="center_vertical|center"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:text="Show more speciality"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

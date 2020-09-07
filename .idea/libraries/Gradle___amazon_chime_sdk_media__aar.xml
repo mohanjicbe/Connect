@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: :amazon-chime-sdk-media:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13312b7488e79ab29db4f12c2367ef4f/jetified-amazon-chime-sdk-media/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13312b7488e79ab29db4f12c2367ef4f/jetified-amazon-chime-sdk-media/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13312b7488e79ab29db4f12c2367ef4f/jetified-amazon-chime-sdk-media/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/13312b7488e79ab29db4f12c2367ef4f/jetified-amazon-chime-sdk-media/jars/libs/shadedwebrtc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

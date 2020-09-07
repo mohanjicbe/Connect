@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@mipmap/toolbar_bg"
+            android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/new_toolbar_style" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:background="@color/grey_300">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/cart_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="0dp"
+                        card_view:cardCornerRadius="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/price_tv_head"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="5dp"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif"
+                                android:maxLines="1"
+                                android:text="Price Details"
+                                android:textAllCaps="true"
+                                android:textColor="@color/mds_bluegrey_700"
+                                android:textSize="14dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/grey_500" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Price (# Items)"
+                                    android:textColor="@color/mds_bluegrey_700"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Rs.4,078"
+                                    android:textColor="@color/mds_bluegrey_700"
+                                    android:textSize="15dp" />
+
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/thyro_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Thyrocare (Home Collection charges)"
+                                    android:textColor="@color/mds_bluegrey_700"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_hme_collection"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Rs.100"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/mds_bluegrey_700"
+                                    android:textSize="15dp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/lal_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Dr. Lalpaths (Home Collection charges)"
+                                    android:textColor="@color/mds_bluegrey_700"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_hme_collection_lal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Rs.100"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/mds_bluegrey_700"
+                                    android:textSize="15dp" />
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Amount Payable"
+                                    android:textColor="@color/mds_bluegrey_700"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_tot_amt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:text="Rs.4,178"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/mds_bluegrey_900"
+                                    android:textSize="16dp" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card_view"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:paddingLeft="50dp"
+                        android:paddingRight="50dp">
+
+                        <ImageView
+                            android:id="@+id/icon_bottom"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/note_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/icon_bottom"
+                            android:fontFamily="sans-serif"
+                            android:text="Safe and secure payments. 100% Authentic products"
+                            android:textColor="@color/mds_bluegrey_400"
+                            android:textSize="13dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mds_bluegrey_50"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/price_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_bott_tot_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="Rs. 3,876"
+                android:textColor="@color/mds_bluegrey_800"
+                android:textSize="21dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="View price details"
+                android:textColor="@color/app_color2"
+                android:textSize="13dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_rounded"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Continue"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/empty_cart"
+            android:tint="@color/mds_bluegrey_500" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="There are no items in the Cart List."
+            android:textColor="@color/grey_700"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_reload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/reload"
+            android:padding="20dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

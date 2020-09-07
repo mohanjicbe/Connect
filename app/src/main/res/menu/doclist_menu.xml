@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_refresh"
+        android:orderInCategory="100"
+        android:title="Refresh"
+        android:icon="@mipmap/refresh"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_showall"
+        android:icon="@mipmap/filter_all"
+        android:orderInCategory="100"
+        android:title="ALL"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_specfilter"
+        android:icon="@mipmap/filter"
+        android:orderInCategory="100"
+        android:title="Speciality Search"
+        app:showAsAction="always" />
+
+</menu>

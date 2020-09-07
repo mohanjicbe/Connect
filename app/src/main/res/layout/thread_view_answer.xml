@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/quest_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_rounded_corner_qtitle"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Patient's Query"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_rounded_corner_answer"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="10dp"
+                    android:text="did foreplay and ejaculated on my hand. I washed my hand with soap after that. I do not remember the semen going near my vagina. I am still virgin and he did not penetrate me. However, the next day I got worried and took an emergency pill. I still have not got my period and it has been a week. I also have PCOD. Have I missed my period because of PCOD? Or could I be pregnant? Please let me know."
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvt_morecomp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="More details about the presenting complaint:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_morecomp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //----------------------More details about the presenting complaint----------------
+
+
+                //----------------------Previous history of the same issue----------------
+
+                <TextView
+                    android:id="@+id/tvt_prevhist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Previous history of the same issue:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_prevhist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //---------------------Previous history of the same issue---------------
+
+                //---------------------Current medications----------------
+
+                <TextView
+                    android:id="@+id/tvt_curmedi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Current medications:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_curmedi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //---------------------Current medications--------------
+
+                //--------------------Past medications of the same issue---------------
+
+                <TextView
+                    android:id="@+id/tvt_pastmedi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Past medications of the same issue:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_pastmedi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //--------------------Past medications of the same issue--------------
+
+                //--------------------Past medications of the same issue---------------
+
+                <TextView
+                    android:id="@+id/tvt_labtest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Lab tests performed:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_labtest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //--------------------Past medications of the same issue--------------
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Answer"
+            android:textColor="@color/mds_bluegrey_800"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="3dp"
+            card_view:contentPadding="5dp">
+
+            <LinearLayout
+                android:id="@+id/qns_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/doc_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/doc_profile_bg"
+                    android:gravity="center_vertical"
+                    android:onClick="doc_prof"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="visible">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/doc_photo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:src="@mipmap/doctor_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvdocname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Dr.Sameer Kumar"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvdocspec"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:maxLines="2"
+                            android:text="Dr.Sameer Kumar"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tvdocid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dr.Sameer Kumar"
+                            android:textColor="@color/blue_300"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btnaskquery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Ask your Question >>"
+                            android:textAllCaps="false"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textview_rounded_corner_anstitle"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Answer"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/line1" />
+
+                <LinearLayout
+                    android:id="@+id/answer_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/docans"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif"
+                        android:linksClickable="true"
+                        android:padding="10dp"
+                        android:text="did foreplay and ejaculated on my hand."
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/ans_extra_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                    </LinearLayout>
+
+                    <com.github.ksoichiro.android.observablescrollview.ObservableWebView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/webview_answer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/prescribe_view_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_prescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/button_rounded"
+                            android:gravity="center"
+                            android:onClick="onclick_viewpres"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="View Prescription"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_cuurent_query_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/answer_layout_attachfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_border_blue"
+                        android:onClick="onClickFile_answer">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/img_preview"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/attach_icon" />
+
+                            <TextView
+                                android:id="@+id/answer_attachfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/img_preview"
+                                android:text="Attached files :"
+                                android:textColor="@color/mds_bluegrey_900"
+                                android:textSize="13sp"
+                                android:textStyle="bold|italic" />
+
+                            <TextView
+                                android:id="@+id/tv_qid_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/attachfile"
+                                android:text=""
+                                android:textSize="10dp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_filename"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/attachfile"
+                                android:text=""
+                                android:textSize="10dp"
+                                android:visibility="gone" />
+
+
+                            <ImageView
+                                android:id="@+id/img_arr"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/right_new" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/answer_files_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginTop="15sp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/line1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:text="Do your like this Answer? "
+                            android:textColor="@color/grey_900"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/like_layout_par"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:id="@+id/like_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/layout_bor"
+                                android:orientation="horizontal"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp">
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@mipmap/like" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="center_vertical"
+                                    android:text="Like"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tvt_answer_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="7777"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tvt_query_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="7777"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/dislike_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/layout_bor"
+                                android:orientation="horizontal"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:textSize="15sp">
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@mipmap/thumbsdown" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:gravity="center_vertical"
+                                    android:text="dislike"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tvt_answer_id2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="7777"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tvt_query_id2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="7777"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_datetime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="right|center_vertical"
+                            android:text="13.Mar.2016 06:20pm"
+                            android:textColor="@color/mds_bluegrey_700"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/feedback_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="User Feedback:"
+                        android:textColor="@color/mds_bluegrey_700"
+                        android:textSize="15sp"
+                        android:textStyle="italic|bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/grey_700" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ratting_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:id="@+id/text_ratting1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Enter your feedback here.."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/text_ratting1_key"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Enter your feedback here.."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBar1"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:rating="0"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_ratting2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Enter your feedback here.."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/text_ratting2_key"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Enter your feedback here.."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBar2"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_ratting3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Enter your feedback here.."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/text_ratting3_key"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Enter your feedback here.."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBar3"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_ratting4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Enter your feedback here.."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/text_ratting4_key"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Enter your feedback here.."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBar4"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_patfeedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="12dp"
+                            android:autoLink="web"
+                            android:fontFamily="sans-serif"
+                            android:text="This is the Patient Feedback"
+                            android:textColor="@color/mds_bluegrey_900"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/doctor_reply_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="sans-serif"
+                            android:text="Doctor's Reply:"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="250dp"
+                            android:layout_height="0.5dip"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/grey_700" />
+
+
+                        <TextView
+                            android:id="@+id/tv_replytext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif"
+                            android:text="This is the Doctor Reply"
+                            android:textColor="@color/mds_bluegrey_900"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</LinearLayout>

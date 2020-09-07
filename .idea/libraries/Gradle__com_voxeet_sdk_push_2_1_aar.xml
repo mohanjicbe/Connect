@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.voxeet.sdk:push:2.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/54a4ab91b36c61a2c15e2a1413389a7b/jetified-push-2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/54a4ab91b36c61a2c15e2a1413389a7b/jetified-push-2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/54a4ab91b36c61a2c15e2a1413389a7b/jetified-push-2.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/push/2.1/cae757ca037286b81507b0fd80fe3b754e46dd38/push-2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/push/2.1/1b8e9187e412256c7cc6877a2969c0c8f45b1390/push-2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

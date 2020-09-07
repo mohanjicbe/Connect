@@ -1,0 +1,340 @@
+<com.orane.icliniq.Parallex.libs.NotifyingScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".Parallex.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@drawable/horizontal_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <include layout="@layout/parallex_header_placeholder" />
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/aboutme_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_aboutme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="About me"
+                android:textColor="@color/app_color"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_aboutme_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="4"
+            android:text="A doctor is someone who maintains or restores human health through the practice of medicine. He or she will diagnose and treat human disease, ailments, injuries, pain or other conditions. A doctor can be found in several settings, including public health organizations, teaching facilities, "
+            android:textColor="@color/mds_bluegrey_800"
+            android:textSize="14sp" />-->
+
+        <LinearLayout
+            android:id="@+id/abt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/tv_abt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="About"
+                android:textColor="@color/mds_bluegrey_800"
+                android:background="@color/grey_100"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_abt_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="4"
+                android:text="sdfsdfsdfsdfsdfsdf"
+                android:textColor="@color/mds_bluegrey_900"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/contact_bg" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/play_icon" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_100"
+            android:padding="3dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/specialistin"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_imspec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="Specialist in"
+                android:textColor="@color/mds_bluegrey_800"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_imspec_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="sans-serif-light"
+            android:text=""
+            android:textColor="@color/mds_bluegrey_900"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_100"
+            android:padding="3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/specializetreatment"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_spectreat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="Specialized Treatments"
+                android:textColor="@color/mds_bluegrey_800"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_spectreat_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="sans-serif-light"
+            android:text=""
+            android:textColor="@color/mds_bluegrey_900"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_100"
+            android:padding="3dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/language_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_mylang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="My Languages"
+                android:textColor="@color/mds_bluegrey_800"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_mylang_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="4"
+            android:text=""
+            android:textColor="@color/mds_bluegrey_900"
+            android:textSize="15sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/person_cons_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_perscons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="For In-Person Consultation"
+                android:textColor="@color/app_color"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_perscons_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Sims, Perundurai Road, Erode, Tamil Nadu, Zip: 638011, IN"
+            android:textColor="@color/mds_bluegrey_900"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_100"
+            android:padding="3dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/treatment_skills_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_clinics_tit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="My Clinics"
+                android:textColor="@color/mds_bluegrey_800"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_clinics_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="sans-serif-light"
+            android:text=""
+            android:textColor="@color/mds_bluegrey_900"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+</com.orane.icliniq.Parallex.libs.NotifyingScrollView>

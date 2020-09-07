@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Voxeet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mohan" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="log in" />
+
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="logout" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="conference name :" />
+
+        <EditText
+            android:id="@+id/conference_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="icliniq" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/join"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="start" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="leave" />
+        <!-- Please put below the layout modification with the video step -->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="users :" />
+
+        <EditText
+            android:id="@+id/participants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Below will be put the block concerning the stop video functionnality -->
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/video_call_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/unknown_user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="On Call"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="Waiting for Opponent video"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <com.voxeet.sdk.views.VideoView
+            android:id="@+id/videoOther"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.voxeet.sdk.views.VideoView
+            android:id="@+id/video"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left|top"
+            android:layout_margin="10dp"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/users_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom_navi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="bottom|center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/togg_cam"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_toggle"
+                android:gravity="center"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_switch_cam"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:padding="5dp"
+                android:src="@mipmap/switch_camera"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_video_on"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="3dp"
+                android:padding="5dp"
+                android:src="@mipmap/cons_video_icon"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_video_off"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:padding="5dp"
+                android:src="@mipmap/cons_video_off"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/img_video_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/button_rounded_red"
+                android:elevation="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="End Call"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/img_video_start"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/button_rounded_new"
+                android:elevation="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="Join Call"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_mic_on"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="3dp"
+                android:padding="5dp"
+                android:src="@mipmap/mic_on"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_mic_off"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="3dp"
+                android:padding="5dp"
+                android:src="@mipmap/mic_off"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <!-- <com.voxeet.sdk.views.VideoView
+                 android:id="@+id/video"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <!--  <com.voxeet.sdk.views.VideoView
+                  android:id="@+id/videoOther"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent" />-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

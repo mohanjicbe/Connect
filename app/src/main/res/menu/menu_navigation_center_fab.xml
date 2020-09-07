@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/i_music"
+        android:checked="true"
+        android:icon="@mipmap/home_icon"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/i_backup"
+        android:icon="@mipmap/doctor_navi_icon"
+        android:title="Doctors" />
+    <!--must set the item title to empty-->
+    <item
+        android:id="@+id/i_empty"
+        android:title="" />
+    <item
+        android:id="@+id/i_favor"
+        android:icon="@mipmap/articles_navi_icon"
+        android:title="Articles" />
+    <item
+        android:id="@+id/i_visibility"
+        android:icon="@mipmap/sett_navi_icon"
+        android:title="Settings" />
+</menu>

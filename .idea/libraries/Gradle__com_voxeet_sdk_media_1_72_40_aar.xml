@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.voxeet.sdk:media:1.72.40@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5866b956d6bd6ccdc735d95a1ce4dbb5/jetified-media-1.72.40/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5866b956d6bd6ccdc735d95a1ce4dbb5/jetified-media-1.72.40/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5866b956d6bd6ccdc735d95a1ce4dbb5/jetified-media-1.72.40/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5866b956d6bd6ccdc735d95a1ce4dbb5/jetified-media-1.72.40/jars/libs/dvconference_client.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/media/1.72.40/6b3d00cdfc0179a4a186e8a498b411f32c4dddf2/media-1.72.40-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/media/1.72.40/6fc5ef3956461b0b47f18f45bfadfffbc5db7f19/media-1.72.40-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

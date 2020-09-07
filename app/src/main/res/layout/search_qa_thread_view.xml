@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="@color/mds_bluegrey_50"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_rounded_corner_qtitle"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Patient's Query"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif"
+                    android:linksClickable="true"
+                    android:padding="10dp"
+                    android:text="did foreplay and ejaculated on my hand. I washed my hand with soap after that. I do not remember the semen going near my vagina. I am still virgin and he did not penetrate me. However, the next day I got worried and took an emergency pill. I still have not got my period and it has been a week. I also have PCOD. Have I missed my period because of PCOD? Or could I be pregnant? Please let me know."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvt_morecomp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="More details about the presenting complaint:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_morecomp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif"
+                    android:linksClickable="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvt_prevhist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Previous history of the same issue:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_prevhist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="14sp" />
+                //---------------------Previous history of the same issue---------------
+
+                //---------------------Current medications----------------
+
+                <TextView
+                    android:id="@+id/tvt_curmedi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Current medications:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_curmedi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="14sp" />
+                //---------------------Current medications--------------
+
+                //--------------------Past medications of the same issue---------------
+
+                <TextView
+                    android:id="@+id/tvt_pastmedi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Past medications of the same issue:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_pastmedi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="14sp" />
+                //--------------------Past medications of the same issue--------------
+
+
+                //--------------------Labtest of the same issue---------------
+
+                <TextView
+                    android:id="@+id/tvt_labtest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Lab tests performed:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_labtest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="14sp" />
+                //--------------------Labtest of the same issue--------------
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ans_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_rounded_corner_anstitle"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Doctor's Answer"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/docans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif"
+                    android:linksClickable="true"
+                    android:padding="10dp"
+                    android:text="did foreplay and ejaculated on my hand. I washed my hand with soap after that. I do not remember the semen going near my vagina. I am still virgin and he did not penetrate me. However, the next day I got worried and took an emergency pill. I still have not got my period and it has been a week. I also have PCOD. Have I missed my period because of PCOD? Or could I be pregnant? Please let me know."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+
+                //----------------------="The Probable causes:"----------------
+
+                <TextView
+                    android:id="@+id/tvt_probcause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="The Probable causes:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_probcause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp" />
+                //----------------------="The Probable causes:"----------------
+
+
+                //----------------------"Investigations to be done:"-----------------
+
+                <TextView
+                    android:id="@+id/tvt_invdone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Investigations to be done:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_invdone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp" />
+                //----------------------"Investigations to be done:"-----------------
+
+
+                //----------------------"Differential diagnosis:"------------------
+
+                <TextView
+                    android:id="@+id/tvt_diffdiag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Differential diagnosis:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_diffdiag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp" />
+                //---------------------"Differential diagnosis:"-----------------
+
+
+                //----------------------"Probable diagnosis"-------------------
+
+                <TextView
+                    android:id="@+id/tvt_probdiag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Probable diagnosis"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_probdiag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp" />
+                //----------------------"Probable diagnosis"-----------------
+
+
+                //-----------------------Treatment plan:"------------------
+
+                <TextView
+                    android:id="@+id/tvt_tratplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Treatment plan:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_tratplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp" />
+                //-----------------------Treatment plan:"------------------
+
+
+                //-----------------------Preventive measures--------------------
+
+                <TextView
+                    android:id="@+id/tvt_prevmeasure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Preventive measures:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_prevmeasure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp" />
+                //-----------------------Preventive measures--------------------
+
+
+                //-----------------------Regarding follow up --------------------
+
+                <TextView
+                    android:id="@+id/tvt_follup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Regarding follow up:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_follup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif"
+                    android:linksClickable="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp" />
+
+                //-----------------------Regarding follow up --------------------
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/line1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/doc_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="top"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/doctor_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvdocname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dr.Sameer Kumar"
+                            android:textColor="@color/mds_bluegrey_700"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_docedu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text=""
+                            android:ellipsize="end"
+                            android:textColor="@color/mds_bluegrey_700"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_docsp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text=""
+                            android:ellipsize="end"
+                            android:textColor="@color/mds_bluegrey_700"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tvdocid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_askquery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/button_rounded"
+                            android:fontFamily="sans-serif"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Ask your Question"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

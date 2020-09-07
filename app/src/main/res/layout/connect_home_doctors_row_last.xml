@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="130dp"
+    android:background="@color/grey_200">
+
+    <LinearLayout
+        android:id="@+id/full_layout"
+        android:layout_width="300dp"
+        android:onClick="onClick_doctor_list"
+        android:layout_height="130dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:elevation="10dp"
+            android:paddingBottom="0dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:contentPadding="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="View All"
+                        android:visibility="gone"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_title_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Click to view more Doctors List"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</RelativeLayout>

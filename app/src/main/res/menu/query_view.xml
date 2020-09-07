@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_newquery"
+        android:orderInCategory="100"
+        android:icon="@mipmap/new_query_icon_white"
+        android:title="New Query"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_send"
+        android:icon="@mipmap/send_icon_white"
+        android:orderInCategory="100"
+        android:title="Send"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/nav_doctors"
+        android:icon="@mipmap/doctor_icon_white2"
+        android:orderInCategory="100"
+        android:title="Doctors"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_hotline"
+        android:icon="@mipmap/hotline_white"
+        android:orderInCategory="100"
+        android:title="Hotine"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_mydocts"
+        android:orderInCategory="100"
+        android:title="My Doctors"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_howworks"
+        android:orderInCategory="100"
+        android:title="How it Works"
+        android:visible="false"
+        app:showAsAction="never" />
+
+</menu>

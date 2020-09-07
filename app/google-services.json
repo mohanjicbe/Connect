@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "913715673848",
+    "firebase_url": "https://icliniq-1051.firebaseio.com",
+    "project_id": "icliniq-1051",
+    "storage_bucket": "icliniq-1051.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913715673848:android:66267d13d6156c88",
+        "android_client_info": {
+          "package_name": "com.orane.icliniq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913715673848-bhidu2snvj3dcuc9lekt8naq643bku21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orane.icliniq",
+            "certificate_hash": "5b2461f22cfffc45c10d45618aeda9b5c72fa99a"
+          }
+        },
+        {
+          "client_id": "913715673848-n8c7qlplikfgo3i9gm2h0ehnsovl42ku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orane.icliniq",
+            "certificate_hash": "3a0319d966d80f82208540b98a402267b781683c"
+          }
+        },
+        {
+          "client_id": "913715673848-m4adie80bueraqu9urbrpbaql8mqi8ni.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orane.icliniq",
+            "certificate_hash": "b98a01ea67cbfe5dac3dfe02e37cfdc3387dcdde"
+          }
+        },
+        {
+          "client_id": "913715673848-2llkes9reut7l401kelcqgckpl36ndl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCunN5JUNyZbCiinF27XEbMMC5JTLvjj0o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913715673848-2llkes9reut7l401kelcqgckpl36ndl7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "913715673848-d597f20ls463cf2vv54kkue65ot7s2lg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orane.icliniq",
+                "app_store_id": "1247883470"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

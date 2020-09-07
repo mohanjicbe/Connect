@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+
+        android:text="@string/main_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <EditText
+        android:id="@+id/editMeetingId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/edit_meeting_id"
+        android:visibility="gone"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:maxLength="35" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_name"
+        android:inputType="text"
+        android:visibility="gone"
+        android:importantForAutofill="no"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/main_continue"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/main_continue" />
+
+    <ProgressBar
+        android:id="@+id/progressAuthentication"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="209dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+
+</LinearLayout>

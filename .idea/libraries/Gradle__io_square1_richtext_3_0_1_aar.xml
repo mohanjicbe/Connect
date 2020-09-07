@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: io.square1:richtext:3.0.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9889aefb076546558b8e093c42bd2d2c/jetified-richtext-3.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9889aefb076546558b8e093c42bd2d2c/jetified-richtext-3.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9889aefb076546558b8e093c42bd2d2c/jetified-richtext-3.0.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.square1/richtext/3.0.1/64c2bdb79d41fdf7aa386eab03d9ec68ea5f3584/richtext-3.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

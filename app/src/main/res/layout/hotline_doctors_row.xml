@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mds_bluegrey_100">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/full_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/hor_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageview_poster"
+                            android:layout_width="69dp"
+                            android:layout_height="69dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/doctor_icon"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:gravity="top"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvdocname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif"
+                                android:maxLines="2"
+                                android:text="Dr. Anshul Varshney"
+                                android:textColor="@color/mds_bluegrey_700"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/tvedu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-light"
+                                android:maxLines="2"
+                                android:text="M.B.B.S, M.D. MEDICINE"
+                                android:textColor="@color/mds_bluegrey_600"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvspec"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif"
+                                android:maxLines="2"
+                                android:text="Paediatric Dentistry, Dentistry, Periodontist, Endodontist"
+                                android:textColor="@color/mds_bluegrey_900"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/plan_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hor_layout"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/left_lay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/plan_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="For 3 months: "
+                                android:textColor="@color/mds_bluegrey_800"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/plan_amt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$19"
+                                android:textColor="@color/mds_bluegrey_700"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_viewprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="27dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/btn_hotlineplans"
+                            android:background="@drawable/blue_border_button"
+                            android:elevation="5dp"
+                            android:fontFamily="sans-serif"
+                            android:onClick="onClick"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="View Profile"
+                            android:textAllCaps="true"
+                            android:textColor="@color/app_color"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_hotlineplans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="27dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_rounded"
+                            android:elevation="5dp"
+                            android:fontFamily="sans-serif"
+                            android:onClick="onClick"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Start Chat"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-thin"
+                            android:maxLines="2"
+                            android:text="Paediatric Dentistry, Dentistry, Periodontist, Endodontist"
+                            android:textColor="@color/red_800"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_docurl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-thin"
+                            android:maxLines="2"
+                            android:text="Paediatric Dentistry, Dentistry, Periodontist, Endodontist"
+                            android:textColor="@color/red_800"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:padding="1dp"
+                        android:src="@mipmap/right"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/side_ribbon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/subscribe_ribbon" />
+
+                <ImageView
+                    android:id="@+id/img_menu"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/menu_dots"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

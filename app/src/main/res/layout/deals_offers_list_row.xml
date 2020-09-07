@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="8dp"
+        card_view:contentPadding="2dp">
+
+        <LinearLayout
+            android:id="@+id/deal_full_layout"
+            android:layout_width="match_parent"
+            android:onClick="deal_click"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.github.ksoichiro.android.observablescrollview.ObservableWebView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/webview_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:onClick="offers_list_click"
+                android:layout_height="37dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/button_rounded_green"
+                android:elevation="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Submit Query"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_offers_id"
+                android:layout_width="wrap_content"
+                android:textSize="10sp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_hline"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_fcode"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_isActivePlan"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:text="10"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_doc_id"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_qid"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_offer_type"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

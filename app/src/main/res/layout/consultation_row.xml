@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_100"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@color/grey_100"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="3dp"
+        card_view:contentPadding="5dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/consul_type_phone_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|top"
+                android:src="@mipmap/phone_icon" />
+
+            <ImageView
+                android:id="@+id/consul_type_video_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|top"
+                android:src="@mipmap/video_cons_ico_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="10dp">
+
+                    <!--
+                                            <ImageView
+                                                android:id="@+id/imageview_poster"
+                                                android:layout_width="80dp"
+                                                android:layout_height="90dp"
+                                                android:layout_marginRight="10dp"
+                                                android:scaleType="fitXY"
+                                                android:src="@mipmap/alok"
+                                                android:visibility="visible" />
+                    -->
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageview_poster"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/alok" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="00dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvdocname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-medium"
+                            android:maxLines="2"
+                            android:text="Dr. Anshul Varshney"
+                            android:textColor="@color/mds_bluegrey_900"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:id="@+id/tvnotes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="10dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:maxLines="3"
+                            android:text="Notes : startActivity . After that you can finish your current activity from where you redirect. When the user clicks new, do FirstActivity.fa.finish(); and call the new Intent."
+                            android:textColor="@color/grey_800"
+                            android:textSize="13sp" />
+
+
+                        <TextView
+                            android:id="@+id/tvctype"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:maxLines="2"
+                            android:text="Type : Phone Consultation"
+                            android:textColor="@color/red_900"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-thin"
+                            android:maxLines="2"
+                            android:text="Paediatric Dentistry, Dentistry, Periodontist, Endodontist"
+                            android:textColor="@color/red_800"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:background="@drawable/cons_radio_border"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical|left"
+                                android:maxLines="2"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="2dp"
+                                android:text="On: 25/10/2016"
+                                android:textColor="@color/red_900"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvtime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-medium"
+                                android:gravity="right"
+                                android:maxLines="2"
+                                android:text="At: 10.30 AM"
+                                android:textColor="@color/green_900"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="22dip"
+                    android:layout_height="22dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/right" />
+
+
+            </RelativeLayout>
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

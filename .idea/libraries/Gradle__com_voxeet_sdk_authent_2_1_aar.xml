@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.voxeet.sdk:authent:2.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3607a9f622a3249093ae86f3ca544917/jetified-authent-2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3607a9f622a3249093ae86f3ca544917/jetified-authent-2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3607a9f622a3249093ae86f3ca544917/jetified-authent-2.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/authent/2.1/a31116a89cfe0e418840ab37c2e8b3572e98faef/authent-2.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.voxeet.sdk/authent/2.1/926163638695bdbb9bd19d311d9a418a4451cf47/authent-2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

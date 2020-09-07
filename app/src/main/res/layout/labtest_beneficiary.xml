@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@mipmap/toolbar_bg"
+            android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Beneficiary Details:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_marginBottom="70dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:fontFamily="sans-serif-light"
+                android:hint="Your Email"
+                android:inputType="textWebEmailAddress"
+                android:padding="5dp"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/edt_mobno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:fontFamily="sans-serif-light"
+                android:hint="Mobile No"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/btn_dob"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/date_border_blue"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Please select your DOB"
+                android:textAllCaps="false"
+                android:textColor="@color/grey_900"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Beneficiary Details:"
+                android:textColor="@color/mds_bluegrey_600"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_bname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:fontFamily="sans-serif-light"
+                android:hint="Beneficiary Name"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textSize="17dp" />
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edt_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:hint="Age"
+                android:inputType="number"
+                android:textSize="17dp"
+                android:visibility="gone"
+                app:met_floatingLabel="highlight" />
+
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/mds_bluegrey_50"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/rad_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Male"
+                    android:textColor="@android:color/black" />
+
+                <RadioButton
+                    android:id="@+id/rad_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Female"
+                    android:textColor="@android:color/black" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left|top"
+                android:hint="Address"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                android:padding="5dp"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/edt_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_border"
+                android:fontFamily="sans-serif-light"
+                android:hint="Pincode"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Choose Tyrocare Agency"
+                android:textColor="@color/mds_bluegrey_600"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_thyrocare_agency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:text="Choose nearest Thyrocare Agency" />
+
+            <TextView
+                android:id="@+id/tv_agencies_name_thyro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text=""
+                android:textColor="@color/mds_bluegrey_600"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_lalpath_agency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:text="Choose nearest Dr. Lalpaths Agency" />
+
+
+            <TextView
+                android:id="@+id/tv_agencies_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text=""
+                android:textColor="@color/mds_bluegrey_600"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Appointment Date:"
+                android:textColor="@color/mds_bluegrey_600"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/track3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/date_border_blue"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Select Date"
+                        android:textAllCaps="false"
+                        android:textColor="@color/grey_900"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btn_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/date_border_blue"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:text="Select Time"
+                        android:textAllCaps="false"
+                        android:textColor="@color/grey_900"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mds_bluegrey_50"
+        android:elevation="5dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/price_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_cat_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="View price details"
+                android:textColor="@color/app_color2"
+                android:textSize="13dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_rounded"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_centerInParent="true"
+            android:text="Continue"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

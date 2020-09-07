@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/toolbar_bg"
+        android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+        android:visibility="visible"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/logo1" />
+
+            <LinearLayout
+                android:id="@+id/AskMail_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_tit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Forgot your passsword?"
+                    android:textColor="@color/mds_bluegrey_600"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_tit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="Enter your email below to receive verification code"
+                    android:textColor="@color/mds_bluegrey_700"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edtemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="Enter your email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="17dp"
+                        app:met_floatingLabel="highlight" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/button_rounded"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="Send Verification Code"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/verify_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_title"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Verification code has been sent to"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+
+                    <TextView
+                        android:id="@+id/tv_mobno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_text"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_horizontal"
+                        android:padding="1dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="+91 9003485395"
+                        android:textColor="@color/mds_bluegrey_600"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                    <LinearLayout
+                        android:id="@+id/timer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_mobno"
+                        android:layout_marginTop="25dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Please wait. While reading OTP SMS Automatically..."
+                            android:textColor="@color/blue_900"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tv_timertext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_text"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="01:20"
+                            android:textColor="@color/mds_bluegrey_600"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edt_otp"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/timer_layout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/answeredittext"
+                        android:ems="4"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:hint="Enter your code here"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+
+                    <Button
+                        android:id="@+id/btn_otp_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_below="@id/edt_otp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_rounded"
+                        android:elevation="10dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:text="Submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tv_resend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_otp_submit"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="Don't receive code yet? Resend again"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/enterpwd_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_cpw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Change Your Password"
+                    android:textColor="@color/mds_bluegrey_600"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_pwd2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Use the form below to update your new password"
+                    android:textColor="@color/mds_bluegrey_600"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                        android:id="@+id/edt_newpwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="Password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:padding="10dp"
+                        android:textSize="17dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText" />
+
+
+                  <!--  <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edt_newpwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="New Password"
+                        android:inputType="textPassword"
+                        android:textSize="17dp"
+                        app:met_floatingLabel="highlight" />
+-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="25dp"
+                        android:text="Password Should be at least Min 8 chars, 1 number, 1 symbol or special char. with combination of both upper case and lower case alphabets."
+                        android:textColor="@color/mds_bluegrey_900"
+                        android:textSize="9sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/edt_confirmpwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:fontFamily="sans-serif"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:textSize="17dp"
+                        app:met_floatingLabel="highlight" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_pwdsubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/button_rounded"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

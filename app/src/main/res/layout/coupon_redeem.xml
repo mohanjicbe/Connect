@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:padding="17dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Enter your Coupon Code here"
+        android:textColor="@color/mds_bluegrey_900"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edt_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:hint="Ex: ZYMd64MTYud45"
+        android:background="@drawable/cons_query_text"
+        android:padding="10dp"
+        android:textColor="@color/mds_bluegrey_700"
+        android:textSize="15sp" />
+
+</LinearLayout>

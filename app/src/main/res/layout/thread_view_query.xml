@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:foo="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="2dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="3dp"
+            card_view:contentPadding="5dp">
+
+            <LinearLayout
+                android:id="@+id/quest_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textview_rounded_corner_qtitle"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Your Query"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/grey_DDD" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--    <TextView
+                            android:id="@+id/pq"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autoLink="all"
+                            android:fontFamily="sans-serif"
+                            android:padding="10dp"
+                            android:text="did foreplay and ejaculated on my hand. I washed my hand with soap after that."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:clickable="true"
+                            android:linksClickable="true"
+                            android:visibility="visible" />
+    -->
+
+                    <LinearLayout
+                        android:id="@+id/query_display_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_cons_for"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autoLink="web"
+                            android:clickable="true"
+                            android:fontFamily="sans-serif-light"
+                            android:linksClickable="true"
+                            android:padding="10dp"
+                            android:text="Consulted for "
+                            android:textColor="@color/app_color"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/pq"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autoLink="web"
+                            android:clickable="true"
+                            android:fontFamily="sans-serif"
+                            android:linksClickable="true"
+                            android:padding="10dp"
+                            android:text="did foreplay and ejaculated on my hand. I washed my hand with soap after that. I do not remember the semen going near my vagina. I am still virgin and he did not penetrate me. However, the next day I got worried and took an emergency pill. I still have not got my period and it has been a week. I also have PCOD. Have I missed my period because of PCOD? Or could I be pregnant? Please let me know."
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/extra_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.github.ksoichiro.android.observablescrollview.ObservableWebView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/query_webview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_attachfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_border_blue"
+                        android:onClick="onClickFile">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/img_preview"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/attach_icon" />
+
+                            <TextView
+                                android:id="@+id/attachfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/img_preview"
+                                android:text="Attached files :"
+                                android:textColor="@color/mds_bluegrey_900"
+                                android:textSize="13sp"
+                                android:textStyle="bold|italic" />
+
+
+                            <TextView
+                                android:id="@+id/tv_filename"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/attachfile"
+                                android:text="sample"
+                                android:textSize="10dp"
+                                android:visibility="gone" />
+
+
+                            <TextView
+                                android:id="@+id/tv_qid_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/attachfile"
+                                android:text="sample"
+                                android:textSize="10dp"
+                                android:visibility="gone" />
+
+
+                            <ImageView
+                                android:id="@+id/img_arr"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/right_new" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/files_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_datetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="right"
+                        android:text="13.Mar.2016 06:20pm"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/qns_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_rounded_corner_anstitle"
+                android:fontFamily="sans-serif"
+                android:padding="1dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Doctor's Answer"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_rounded_corner_answer"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/docans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="10dp"
+                    android:text="did foreplay and ejaculated on my hand. I washed my hand with soap after that. I do not remember the semen going near my vagina. I am still virgin and he did not penetrate me. However, the next day I got worried and took an emergency pill. I still have not got my period and it has been a week. I also have PCOD. Have I missed my period because of PCOD? Or could I be pregnant? Please let me know."
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvt_probcause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="The Probable causes:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_probcause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //----------------------="The Probable causes:"----------------
+
+                //----------------------"Investigations to be done:"-----------------
+
+                <TextView
+                    android:id="@+id/tvt_invdone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Investigations to be done:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_invdone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //----------------------"Investigations to be done:"-----------------
+
+                //----------------------"Differential diagnosis:"------------------
+
+                <TextView
+                    android:id="@+id/tvt_diffdiag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Differential diagnosis:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_diffdiag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //---------------------"Differential diagnosis:"-----------------
+
+
+                //----------------------"Probable diagnosis"-------------------
+
+                <TextView
+                    android:id="@+id/tvt_probdiag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Probable diagnosis"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_probdiag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //----------------------"Probable diagnosis"-----------------
+
+
+                //-----------------------Treatment plan:"------------------
+
+                <TextView
+                    android:id="@+id/tvt_tratplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Treatment plan:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_tratplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //-----------------------Treatment plan:"------------------
+
+
+                //-----------------------Preventive measures--------------------
+
+                <TextView
+                    android:id="@+id/tvt_prevmeasure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Preventive measures:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_prevmeasure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                //-----------------------Preventive measures--------------------
+
+
+                //-----------------------Regarding follow up --------------------
+
+                <TextView
+                    android:id="@+id/tvt_follup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Regarding follow up:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_follup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:paddingLeft="20dp"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                //-----------------------Regarding follow up --------------------
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/grey_100"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/doc_photo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="2dp"
+                        android:src="@mipmap/doctor_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvdocname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dr.Sameer Kumar"
+                            android:textColor="@color/blue_300"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvdocid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dr.Sameer Kumar"
+                            android:textColor="@color/blue_300"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Ask your Question >>"
+                            android:textAllCaps="false" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

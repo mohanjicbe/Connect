@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="175dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/grey_100">
+
+    <LinearLayout
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_male_icon"
+            android:layout_width="57dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:src="@mipmap/male_icon"
+            android:visibility="gone"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_female_icon"
+            android:layout_width="57dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:src="@mipmap/female_icon"/>
+
+        <TextView
+            android:id="@+id/tv_relation"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="MySelf"
+            android:textColor="@color/mds_bluegrey_800"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Rajendran dakdsas adsas dasdas  asdasdas"
+            android:textColor="@color/mds_bluegrey_800"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</RelativeLayout>

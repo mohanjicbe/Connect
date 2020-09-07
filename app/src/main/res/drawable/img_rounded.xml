@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/orange_800" />
+            <gradient android:angle="-90" android:endColor="@color/blue_300" android:startColor="@color/blue_300" />
+            <padding
+                android:bottom="2dp"
+                android:left="2dp"
+                android:right="5dp"
+                android:top="2dp" />
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="5dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="5dp" />
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/app_color" />
+            <padding
+                android:bottom="2dp"
+                android:left="2dp"
+                android:right="5dp"
+                android:top="2dp" />
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="5dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="5dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/app_color" />
+            <padding
+                android:bottom="2dp"
+                android:left="2dp"
+                android:right="5dp"
+                android:top="2dp" />
+            <corners
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="5dp"
+                android:topLeftRadius="0dp"
+                android:topRightRadius="5dp" />
+        </shape>
+    </item>
+</selector>
+
+

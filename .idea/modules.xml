@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Connect.iml" filepath="$PROJECT_DIR$/.idea/modules/Connect.iml" group="Connect" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Connect/app" />
+      <module fileurl="file://$PROJECT_DIR$/commonlib/commonlib.iml" filepath="$PROJECT_DIR$/commonlib/commonlib.iml" group="Connect/commonlib" />
+      <module fileurl="file://$PROJECT_DIR$/mobilertc/mobilertc.iml" filepath="$PROJECT_DIR$/mobilertc/mobilertc.iml" group="Connect/mobilertc" />
+    </modules>
+  </component>
+</project>

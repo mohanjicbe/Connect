@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mds_bluegrey_50"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@mipmap/toolbar_bg"
+            android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Prescription Entry"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/schedule_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/grey_200"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_appt_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:padding="7dp"
+                            android:text="Name of the Drug"
+                            android:textColor="@color/app_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinner_dtype"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:gravity="bottom"
+                            android:padding="0dp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/drugtype_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/blue_border_button"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_drug_type_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Select Drug type"
+                                android:textAllCaps="false"
+                                android:textColor="@color/app_color"
+                                android:textSize="17dp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@mipmap/down_arrow"
+                                android:tint="@color/black" />
+
+                        </RelativeLayout>
+
+
+                        <EditText
+                            android:id="@+id/edt_drug_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:fontFamily="sans-serif"
+                            android:gravity="bottom"
+                            android:hint="Drug Name"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_timezone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="2"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Dosage"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/edt_dosage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:fontFamily="sans-serif"
+                            android:gravity="bottom"
+                            android:hint="Drug dose"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="2"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Quantity"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/edt_drug_qty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:fontFamily="sans-serif"
+                            android:gravity="bottom"
+                            android:hint="Drug Qty"
+                            android:inputType="number"
+                            android:padding="8dp"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/howtotake_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/blue_border_button"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_howtotake_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Select How to take"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_color"
+                            android:textSize="17dp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/down_arrow"
+                            android:tint="@color/black" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="2"
+                            android:fontFamily="sans-serif-light"
+                            android:text="How to Take "
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/spinner_how"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="500dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:gravity="bottom"
+                            android:padding="0dp"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="2"
+                            android:fontFamily="sans-serif-light"
+                            android:text="For x days"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/edt_drug_days"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_border"
+                            android:fontFamily="sans-serif"
+                            android:gravity="bottom"
+                            android:hint="Drug Qty"
+                            android:inputType="number"
+                            android:padding="8dp"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/when_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/blue_border_button"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_whentotake_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Select When to take"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_color"
+                            android:textSize="17dp"
+                            android:textStyle="normal" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/down_arrow"
+                            android:tint="@color/black" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_weight="2"
+                            android:fontFamily="sans-serif-light"
+                            android:text="When to Take"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <Spinner
+                            android:id="@+id/spinner_when"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="500dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:gravity="bottom"
+                            android:padding="0dp"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:gravity="center_vertical|left"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_300"
+                            android:fontFamily="sans-serif-light"
+                            android:padding="7dp"
+                            android:text="Select your Time Zone"
+                            android:textColor="@color/grey_900"
+                            android:textSize="15sp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_changetimezone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical|right"
+                            android:text="( Change Timezone )"
+                            android:textColor="@color/red_900"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_entry_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_rounded"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"
+                    android:text="SAVE"
+                    android:visibility="gone"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

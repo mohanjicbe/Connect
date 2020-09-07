@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="false"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/logo1" />
+
+        <TextView
+            android:id="@+id/tv_attach_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="url"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_quest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_toRightOf="@+id/imageView4"
+            android:autoLink="none"
+            android:fontFamily="sans-serif-light"
+            android:text="Does anxiety cause hand tremor and shoulder pain?"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:padding="2dp"
+            android:src="@mipmap/close_thin"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_attach_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_attach_url"
+            android:text="ATT ID"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

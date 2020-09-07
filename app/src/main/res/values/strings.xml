@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">iCliniq-Connect</string>
+
+    <string name="btn_pick">Single Pick From Gallery</string>
+    <string name="btn_pick_mul"> Multiple Pick From Gallery</string>
+
+    <string-array name="tz">
+        <item>GMT(+5:30) Delhi,Kolkata</item>
+        <item>GMT(+5:00) Srilanka, Colombo</item>
+        <item>Choose another Timezone</item>
+    </string-array>
+
+    <string name="phone_title_text">Phone Number</string>
+    <string name="selected_time">The time you picked will be shown here.</string>
+    <string name="selected_date">The date you picked will be shown here.</string>
+    <string name="pick_time">Pick Time</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="mode_24_hours">Use 24 hour mode</string>
+    <string name="mode_dark_time">Use dark theme</string>
+    <string name="mode_dark_date">Use dark theme</string>
+    <string name="mode_custom_accent">Use custom accent</string>
+    <string name="vibrate_time">Vibrate on touch</string>
+    <string name="vibrate_date">Vibrate on touch</string>
+    <string name="dismiss_time">Dismiss on pause (eg: orientation change)</string>
+    <string name="dismiss_date">Dismiss on pause (eg: orientation change)</string>
+    <string name="title_time">Show a title</string>
+    <string name="title_date">Show a title</string>
+    <string name="show_year_first">Show the year picker first</string>
+    <string name="enable_seconds">Show seconds picker</string>
+    <string name="limit_times">Limit selectable times</string>
+    <string name="limit_dates">Limit selectable dates</string>
+    <string name="highlight_dates">Highlight certain dates</string>
+
+    <string name="btn_ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="choose">Choose a folder</string>
+    <string name="next">NEXT</string>
+
+    <string name="facebook_app_id">1727197887493941</string>
+    <!--<string name="google_app_id">836825415714</string>-->
+
+    <!--<string name="facebook_app_id">202844597278766</string>-->
+    <string name="fb_login_protocol_scheme">fb202844597278766</string>
+
+
+    <string name="permission_alert_dialog_title">Requesting SMS permission</string>
+    <string name="permission_dialog_message">The app will now request your permission to send and read SMS related services.</string>
+
+
+    <string name="launchActivity_Message">Here you will see the result (Mini Notification or Popup), if you have configured the Campaign in Appvirality Dashboard.</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="google_plus_title">WhatsApp</string>
+    <string name="google_maps_title">Messenger</string>
+    <string name="google_messenger_title">Other</string>
+
+    <string name="termsprivacy">By Signing up, you agree to our <a href="https://www.icliniq.com/p/terms?nolayout=1">Terms of Use </a> &amp; Privacy Policy</string>
+
+    <string name="attach_note"><![CDATA[Note : You can attach any lab reports & other relevant photos. It will be helpful for the consultation.]]></string>
+    <string name="fileSize">File Size</string>
+    <string name="currentDir">Current Dir</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="resend_phone_auth">Resend</string>
+    <string name="dgts__login_digits_text">Validate Mobile no</string>
+    <string name="verify_phone_auth">Verify</string>
+    <string name="forgotpw"><a href="https://www.icliniq.com/users/forgetpass">Forgot your password?</a></string>
+    <string name="hint_verification_code">Verification Code</string>
+    <string name="signed_out">Signed Out</string>
+    <string name="action_settings">Settings</string>
+    <string name="start_phone_auth">Start</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+
+    <string name="tips1"><![CDATA[&#8226;&#160;&#160;&#160;Your health issue will be shared across with our doctor panel. ]]></string>
+    <string name="tips2"><![CDATA[&#8226;&#160;&#160;&#160;A doctor will send medical advice to your health issue subsequently.]]></string>
+    <string name="tips3"><![CDATA[&#8226;&#160;&#160;&#160;You can then follow up with the same doctor.]]></string>
+    <string name="tips4"><![CDATA[&#8226;&#160;&#160;&#160;3500+ doctors from 80+ specialities will evaluate and give you personalized medical advice. ]]></string>
+
+
+    <string name="howitworks"><![CDATA[&#8226;&#160;&#160;&#160;3500+ Doctors from 80+ Specialities available to talk anytime.
+    <br /><br />
+    &#8226;&#160;&#160;&#160;Post your health issue with a time preference.
+    <br /><br />
+    &#8226;&#160;&#160;Pay the Consultation Fee.
+    <br /><br />
+    &#8226;&#160;&#160;&#160;Doctor will confirm the time for the consultation.
+    <br /><br />
+    It is a Private Video Chat with mute and other privacy options.
+    <br /><br />
+    Be ready and login on time to consult the doctor on a Video Chat. It is absolutely <b>Private</b> and <b>Secure</b>.]]></string>
+
+
+    <string name="large_text">
+
+    <![CDATA[<br /><b>iCliniq</b> is an online doctor consultation platform where users post their health issues to get medical advice from medical doctors.
+    <br /><br />
+    Users can consult the doctors via queries, phone and video. iCliniq has it &rsquo;s own and big market-share of online patients from US, UK, Australia, India, Europe, Middle East and Israel.
+    <br /><br />
+    Team-icliniq is committed to provide the best in online healthcare. <b>&quot;Prevention is better than cure&quot;</b> is an old adage. Icliniq vision is to ensure that all its users are correctly informed about their potential health issues and for the Doctor team at icliniq to help the users with prevention.
+    <br /><br />
+    <a href="https://www.icliniq.com/">icliniq.com</a> is brought to you by Orane Healthcare (I) Private Ltd. Team-icliniq consists of imminent doctors, researchers and programmers who work round the clock to innovate, create and implement the best web technologies for use of doctors, users and hospitals.
+    <br /><br />
+    We are happy of you being with us.
+    <br /><br />
+    Any questions, send an email to <a href="mailto:icliniq@icliniq.com">icliniq@icliniq.com</a>.
+    <br /><br /><br />]]>
+
+    </string>
+
+    <string name="skip">SKIP</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- File Chooser -->
+    <string name="empty_directory">Empty Directory</string>
+    <string name="chooser_title">Empty Directory</string>
+    <string name="storage_removed">Storage was removed or unmounted.</string>
+    <string name="choose_file">Select a file</string>
+    <string name="error_selecting_file">Error selecting File</string>
+    <string name="internal_storage">Internal storage</string>
+    <!-- File Chooser -->
+
+
+    <!-- Intro Screen -->
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+    <!-- Intro Screen -->
+
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.kissmetrics.sdk:KISSmetricsSDK:2.2.2@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kissmetrics.sdk/KISSmetricsSDK/2.2.2/5e4171d6e1fc3b6614f3b6887e7a34afb462a39a/KISSmetricsSDK-2.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kissmetrics.sdk/KISSmetricsSDK/2.2.2/2b61ece328e161801e21ff3e1c0a999c70ce11/KISSmetricsSDK-2.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kissmetrics.sdk/KISSmetricsSDK/2.2.2/7d632568ccc49f37448c8d456c74a772f8913b39/KISSmetricsSDK-2.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

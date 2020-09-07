@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_300"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:paddingLeft="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:id="@+id/q_logo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/q_logo_1" />
+
+            <LinearLayout
+                android:id="@+id/logo_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/q_logo"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="7dp">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="iCliniq"
+                    android:textColor="@color/app_color2"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="#1 doctor consultation platform!"
+                    android:textColor="@color/mds_bluegrey_500"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/img_share_icon"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/img_search_logo"
+                android:src="@mipmap/share"
+                android:tint="@color/app_color" />
+
+
+            <ImageView
+                android:id="@+id/img_search_logo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:src="@mipmap/search_icon_grey"
+                android:tint="@color/app_color" />
+
+
+            <!--  <ImageView
+                  android:id="@+id/img_small_logo"
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_gravity="center_vertical"
+                  android:src="@mipmap/q_logo_1" />
+
+              <TextView
+                  android:id="@+id/tv_tooltit"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  android:layout_toEndOf="@+id/img_small_logo"
+                  android:fontFamily="sans-serif"
+                  android:gravity="center_vertical"
+                  android:text="Icliniq"
+                  android:textColor="@color/app_color"
+                  android:textSize="21sp" />
+
+              <ImageView
+                  android:layout_width="20dp"
+                  android:layout_height="25dp"
+                  android:layout_centerVertical="true"
+                  android:layout_gravity="center_vertical"
+                  android:layout_marginRight="15dp"
+                  android:layout_toLeftOf="@+id/img_search_logo"
+                  android:src="@mipmap/share"
+                  android:tint="@color/app_color" />
+
+              <ImageView
+                  android:id="@+id/img_search_logo"
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:layout_gravity="center_vertical"
+                  android:paddingRight="10dp"
+                  android:src="@mipmap/search_icon_grey"
+                  android:tint="@color/app_color" />-->
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_200"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="Health Tips"
+                android:textColor="@color/mds_bluegrey_800"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+
+            <!--  <com.daimajia.slider.library.Indicators.PagerIndicator
+                  android:id="@+id/custom_indicator"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_marginBottom="5dp"
+                  android:gravity="center"
+                  android:visibility="gone"
+                  custom:selected_color="#0095BF"
+                  custom:selected_drawable="@mipmap/logo"
+                  custom:selected_height="6dp"
+                  custom:selected_padding_left="5dp"
+                  custom:selected_padding_right="5dp"
+                  custom:selected_width="6dp"
+                  custom:shape="oval"
+                  custom:unselected_color="#55333333"
+                  custom:unselected_height="6dp"
+                  custom:unselected_padding_left="5dp"
+                  custom:unselected_padding_right="5dp"
+                  custom:unselected_width="6dp" />-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="0dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/left_img1"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/icq100" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/left_img1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Instant chat with Doctor"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Ask unlimited queries for 24/7"
+                        android:textAllCaps="false"
+                        android:textColor="@color/mds_bluegrey_900"
+                        android:textSize="13sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/right" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/mds_bluegrey_50"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/home_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_ask"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <TextView
+                        android:id="@+id/btn_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="iCliniq 100 hrs Hotline chat"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_color"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/chat_bluedot" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="My Section"
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:text="More"
+                    android:textColor="@color/mds_bluegrey_600"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <!--   <com.daimajia.slider.library.SliderLayout
+                   android:id="@+id/slider"
+                   android:layout_width="match_parent"
+                   android:layout_height="135dp"
+                   android:layout_margin="10dp"
+                   android:visibility="gone"
+                   custom:auto_cycle="true"
+                   custom:indicator_visibility="visible"
+                   custom:pager_animation="Accordion"
+                   custom:pager_animation_span="1100" />-->
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/offer_image1"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:onClick="onClick_hotline"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icq50_banner" />
+
+                    <Button
+                        android:id="@+id/btn_getitnow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="27dp"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_toLeftOf="@+id/btn_hotlineplans"
+                        android:background="@drawable/button_rounded"
+                        android:elevation="10dp"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="7dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="7dp"
+                        android:paddingBottom="5dp"
+                        android:text="Start a chat"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/offer_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="Get 25% Offer"
+                        android:textColor="@color/app_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/offer_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/offer_title"
+                        android:layout_marginRight="110dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Get up to 25% OFF on every payment with a prepaid package."
+                        android:textColor="@color/app_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/butt_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="110dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Read Now"
+                        android:textAllCaps="true"
+                        android:textColor="@color/app_color"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_mysection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="My Section"
+                android:textColor="@color/mds_bluegrey_800"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_AskQuery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:elevation="15dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/icon_row1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:src="@mipmap/chat_icon" />
+
+                    <LinearLayout
+                        android:id="@+id/icon_row_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toLeftOf="@+id/img_right_arrow"
+                        android:layout_toRightOf="@+id/icon_row1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_chat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:text="Ask a doctor online "
+                                android:textColor="@color/mds_bluegrey_900"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/btn_free"
+                                android:layout_width="50dp"
+                                android:layout_height="18dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_toRightOf="@+id/tv_chat"
+                                android:background="@drawable/button_rounded_green"
+                                android:elevation="5dp"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="Free"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Ask your health query and get it answered "
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="14dp"
+                            android:textStyle="normal" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_right_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right"
+                        android:src="@mipmap/right" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_100"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_offer_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Offers/Deals"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_viewall_offers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:text="VIEW ALL"
+                    android:textColor="@color/grey_800"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_deals"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/deals_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <include
+                layout="@layout/cardviewrow"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:elevation="10dp"
+                android:visibility="gone"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="0dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_offer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="2dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/offer_icon1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:src="@mipmap/query_icon"
+                            android:tint="@color/app_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/offer_icon1"
+                            android:fontFamily="sans-serif"
+                            android:text="Unlimited chat for 50 hours - #icq50"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_getitnow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="bottom"
+                        android:padding="5dp"
+                        android:text="Get it Now"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="17dp"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_100"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_recent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Recent Q&amp;A"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_viewall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:gravity="right"
+                        android:text="VIEW ALL"
+                        android:textColor="@color/grey_800"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/hsv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/innerLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="0dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true"
+                                card_view:cardCornerRadius="3dp"
+                                card_view:contentPadding="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="?android:attr/selectableItemBackground"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:layout_marginRight="15dp"
+                                            android:src="@mipmap/alok" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif"
+                                                android:maxLines="2"
+                                                android:text="Query Title Add the dependency (available from mavenCentral and Add the dependency (available from mavenCentral and"
+                                                android:textColor="@color/mds_bluegrey_800"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+                                                android:visibility="visible" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif"
+                                                android:maxLines="2"
+                                                android:text="Short Title You can use any FAB library as long as it implements "
+                                                android:textColor="@color/mds_bluegrey_700"
+                                                android:textSize="13sp" />
+
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.4dip"
+                                        android:layout_marginTop="7dp"
+                                        android:background="@color/mds_bluegrey_100"
+                                        android:visibility="gone" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:padding="8dp"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:src="@mipmap/share_grey"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="3dp"
+                                                android:fontFamily="sans-serif"
+                                                android:gravity="center_vertical"
+                                                android:text="Share"
+                                                android:textColor="@color/mds_bluegrey_600"
+                                                android:textStyle="normal"
+                                                android:visibility="gone" />
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2dp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif-light"
+                                                android:maxLines="1"
+                                                android:text="Speciality : Internal Medicines"
+                                                android:textColor="@color/red_800"
+                                                android:textStyle="bold"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2dp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif-light"
+                                                android:maxLines="1"
+                                                android:text="Speciality : Internal Medicines"
+                                                android:textColor="@color/red_800"
+                                                android:textStyle="bold"
+                                                android:visibility="gone" />
+
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_marginLeft="05dp"
+                                            android:ellipsize="end"
+                                            android:fontFamily="sans-serif"
+                                            android:maxLines="1"
+                                            android:text="Internal Medicines"
+                                            android:textColor="@color/mds_bluegrey_800"
+                                            android:textStyle="normal" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:background="@drawable/doctor_green"
+                                            android:fontFamily="sans-serif"
+                                            android:gravity="center_horizontal|center_vertical"
+                                            android:paddingLeft="8dp"
+                                            android:paddingTop="1dp"
+                                            android:paddingRight="8dp"
+                                            android:paddingBottom="1dp"
+                                            android:text="Article"
+                                            android:textColor="@color/white"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold"
+                                            android:visibility="visible" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="vertical">
+
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:cardElevation="5dp"
+                                app:cardUseCompatPadding="true"
+                                card_view:cardCornerRadius="3dp"
+                                card_view:contentPadding="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="?android:attr/selectableItemBackground"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:id="@+id/imageview_poster"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:layout_marginRight="15dp"
+                                            android:src="@mipmap/alok" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textview_title"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif"
+                                                android:maxLines="2"
+                                                android:text="Query Title Add the dependency (available from mavenCentral and Add the dependency (available from mavenCentral and"
+                                                android:textColor="@color/mds_bluegrey_800"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+                                                android:visibility="visible" />
+
+                                            <TextView
+                                                android:id="@+id/textview_short"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="5dp"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif"
+                                                android:maxLines="2"
+                                                android:text="Short Title You can use any FAB library as long as it implements "
+                                                android:textColor="@color/mds_bluegrey_700"
+                                                android:textSize="13sp" />
+
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.4dip"
+                                        android:layout_marginTop="7dp"
+                                        android:background="@color/mds_bluegrey_100"
+                                        android:visibility="gone" />
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/share_layout"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:padding="8dp"
+                                            android:visibility="gone">
+
+                                            <ImageView
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:src="@mipmap/share_grey"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="3dp"
+                                                android:fontFamily="sans-serif"
+                                                android:gravity="center_vertical"
+                                                android:text="Share"
+                                                android:textColor="@color/mds_bluegrey_600"
+                                                android:textStyle="normal"
+                                                android:visibility="gone" />
+
+
+                                            <TextView
+                                                android:id="@+id/tv_url"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2dp"
+                                                android:layout_weight="1" />
+                                            <!--        <include
+                                            layout="@layout/cardview_row2"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content" />-->
+
+                                            <include
+                                                layout="@layout/cardview_homeoffer1"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif-light"
+                                                android:maxLines="1"
+                                                android:text="Speciality : Internal Medicines"
+                                                android:textColor="@color/red_800"
+                                                android:textStyle="bold"
+                                                android:visibility="gone" />
+
+                                            <TextView
+                                                android:id="@+id/tv_docid"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="2dp"
+                                                android:layout_weight="1"
+                                                android:ellipsize="end"
+                                                android:fontFamily="sans-serif-light"
+                                                android:maxLines="1"
+                                                android:text="Speciality : Internal Medicines"
+                                                android:textColor="@color/red_800"
+                                                android:textStyle="bold"
+                                                android:visibility="gone" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/textview_speciality"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_marginLeft="05dp"
+                                            android:layout_toLeftOf="@+id/textview_ctype"
+                                            android:layout_toRightOf="@+id/share_layout"
+                                            android:ellipsize="end"
+                                            android:fontFamily="sans-serif"
+                                            android:maxLines="1"
+                                            android:text="Internal Medicines"
+                                            android:textColor="@color/mds_bluegrey_800"
+                                            android:textStyle="normal" />
+
+                                        <TextView
+                                            android:id="@+id/textview_ctype"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:background="@drawable/doctor_green"
+                                            android:fontFamily="sans-serif"
+                                            android:gravity="center_horizontal|center_vertical"
+                                            android:paddingLeft="8dp"
+                                            android:paddingTop="1dp"
+                                            android:paddingRight="8dp"
+                                            android:paddingBottom="1dp"
+                                            android:text="Article"
+                                            android:textColor="@color/white"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold"
+                                            android:visibility="visible" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!--             <include
+                 layout="@layout/cardview_row2"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content" />-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="10dp"
+                card_view:cardCornerRadius="10dp"
+                card_view:contentPadding="0dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_offer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="2dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:id="@+id/offer_image2"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:onClick="onClick_offer"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/nonindia_subs" />
+
+                            <Button
+                                android:id="@+id/btn_buynow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="27dp"
+                                android:layout_gravity="right|bottom"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_toLeftOf="@+id/btn_hotlineplans"
+                                android:background="@drawable/button_rounded"
+                                android:elevation="5dp"
+                                android:fontFamily="sans-serif"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="Get it"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+                        </FrameLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/offer_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:fontFamily="sans-serif-smallcaps"
+                                android:text="Get 25% Offer"
+                                android:textColor="@color/app_color"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/offer_desc2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/offer_title2"
+                                android:layout_marginRight="110dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="sans-serif"
+                                android:text="Get up to 25% OFF on every payment with a prepaid package."
+                                android:textColor="@color/app_color"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/butt_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="110dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Read Now"
+                                android:textAllCaps="true"
+                                android:textColor="@color/app_color"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_getitnow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="bottom"
+                        android:padding="5dp"
+                        android:text="Get it Now"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="17dp"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--  <include
+                  layout="@layout/cardview_homeoffer1"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content" />-->
+
+            <include
+                layout="@layout/cardview_homeoffer2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|right"
+    android:gravity="center_vertical|right"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/query_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/outgoing_new"
+            android:gravity="center_vertical|right"
+            android:backgroundTint="@color/app_color"
+            android:orientation="vertical"
+            android:paddingLeft="13dp"
+            android:paddingTop="5dp"
+            android:paddingRight="13dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_query"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web|email|phone"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif"
+                    android:linksClickable="true"
+                    android:text="did foreplay and"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+
+                //----------------------=More details about resentingcomplaint----------------
+
+                <TextView
+                    android:id="@+id/tvt_morecomp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="More details about the presenting complaint:"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_morecomp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+                //----------------------More details ----------------
+
+                //----------------------Previous history issue----------------
+
+                <TextView
+                    android:id="@+id/tvt_prevhist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Previous history of the same issue:"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_prevhist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                //---------------------Previous history of the same issue---------------
+
+                //---------------------Current medications----------------
+
+                <TextView
+                    android:id="@+id/tvt_curmedi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Current medications:"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_curmedi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                //---------------------Current medications--------------
+
+                //--------------------Past medications of the same issue---------------
+
+                <TextView
+                    android:id="@+id/tvt_pastmedi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Past medications of the same issue:"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_pastmedi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                //--------------------Past medications of the same issue---------------
+
+                <TextView
+                    android:id="@+id/tvt_labtest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Lab tests performed:"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_labtest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Rest for rheumatoid arthritis, your treatment is going in right direction."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                //--------------------Past medications of the same issue--------------
+
+
+                <LinearLayout
+                    android:id="@+id/layout_attachfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/attach_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Attached files :"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold|italic" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_file"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_border_blue"
+                    android:onClick="onClickFile"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/img_preview"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/attach_icon" />
+
+                        <TextView
+                            android:id="@+id/attachfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/img_preview"
+                            android:text="Attached files :"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold|italic" />
+
+
+                        <TextView
+                            android:id="@+id/tv_filename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/attachfile"
+                            android:text="sample"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+
+                        <ImageView
+                            android:id="@+id/img_arr"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/right_new" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/files_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="right"
+                    android:text="3 hours ago"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageview_poster"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="top|right"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/logo1"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

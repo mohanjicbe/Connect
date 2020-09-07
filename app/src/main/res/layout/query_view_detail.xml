@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mds_bluegrey_50"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@mipmap/toolbar_bg"
+        android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="5dp"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/full_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="sans-serif"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/parent_qalayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/str_status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ftrack_status_rounded"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/note" />
+
+                <TextView
+                    android:id="@+id/ftrack_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Status: Your query is in Queue. You will get an answer in 48 hours. You will receive an E-mail notification once your query is answered."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ftrack_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_cantwait"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal"
+                    android:text="Can't Wait?"
+                    android:textColor="@color/grey_800"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/line1" />
+
+                <TextView
+                    android:id="@+id/ftrack_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+                    android:text="Pay Rs.99 to Fast Track Your Query and get a Detailed Answer in 4 to 8 hours."
+                    android:textColor="@color/grey_900"
+                    android:textSize="17sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_ftrack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:elevation="3dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Fast Track"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sugg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/pay_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/btn_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/button_rounded"
+                        android:elevation="3dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Pay"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/paynow"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/btn_paynow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pay Now"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_cancel1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_300"
+                        android:elevation="10dp"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textAllCaps="true"
+                        android:textColor="@color/mds_bluegrey_700"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/edt_query_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/edt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:padding="5dp"
+                        android:text="Type your reply"
+                        android:textColor="@color/mds_bluegrey_600"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:background="@color/grey_500" />
+
+                    <EditText
+                        android:id="@+id/edt_query"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/edittext_border"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:hint="Type your query here.."
+                        android:inputType="textMultiLine"
+                        android:isScrollContainer="true"
+                        android:minHeight="90dp"
+                        android:padding="10dp"
+                        android:textColor="@color/mds_bluegrey_700"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="10dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/note"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_nottext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dp"
+                            android:fontFamily="sans-serif-light"
+                            android:text="* You can attach Images / files in next step"
+                            android:textColor="@color/mds_bluegrey_800"
+                            android:textSize="13sp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <!-- <LinearLayout
+                     android:id="@+id/edt_query_layout"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="10dp"
+                     android:layout_marginRight="10dp"
+                     android:layout_marginTop="10dp"
+                     android:orientation="vertical"
+                     android:visibility="gone">
+
+                     <TextView
+                         android:id="@+id/edt_title"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:background="@drawable/textview_rounded_corner_editquery"
+                         android:fontFamily="sans-serif"
+                         android:gravity="center"
+                         android:padding="5dp"
+                         android:text="Type Your Reply"
+                         android:textColor="@color/white"
+                         android:textSize="16sp"
+                         android:textStyle="bold"
+                         android:visibility="visible" />
+
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="0.5dip"
+                         android:layout_marginLeft="0dp"
+                         android:layout_marginRight="10dp"
+                         android:background="@color/grey_DDD" />
+
+                     <EditText
+                         android:id="@+id/edt_query"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true"
+                         android:background="@drawable/answeredittext"
+                         android:elevation="10dp"
+                         android:fontFamily="sans-serif-light"
+                         android:gravity="left"
+                         android:hint="Type your health query here.."
+                         android:inputType="textMultiLine"
+                         android:isScrollContainer="true"
+                         android:minHeight="100dp"
+                         android:padding="10dp"
+                         android:scrollbars="vertical"
+                         android:textColor="@color/black"
+                         android:textSize="15sp"
+                         android:textStyle="normal"
+                         android:visibility="visible">
+
+                         <requestFocus />
+                     </EditText>
+                 </LinearLayout>-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/layout_attachfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/attach_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Attached files :"
+                            android:textColor="@color/grey_900"
+                            android:textSize="13sp"
+                            android:textStyle="normal|italic" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:background="@color/grey_800" />
+
+                    <ScrollView
+                        android:id="@+id/scrollView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/file_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <Button
+                        android:id="@+id/btn_attach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/blue_border_button"
+                        android:elevation="10dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingLeft="50dp"
+                        android:paddingRight="50dp"
+                        android:text="Attach Files/Images"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_color" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Submit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvaskquery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit Your Query"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <Button
+                            android:id="@+id/btn_askfollup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/button_rounded_new"
+                            android:elevation="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="Submit Query"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvqfee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="7dp"
+                                android:fontFamily="sans-serif"
+                                android:text="(Rs.299)"
+                                android:textColor="@color/mds_bluegrey_600"
+                                android:textSize="17sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <View
+                                android:id="@+id/line1"
+                                android:layout_width="0.8dp"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/mds_bluegrey_600" />
+
+                            <TextView
+                                android:id="@+id/tv_or"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/line1"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Or"
+                                android:textColor="@color/mds_bluegrey_600"
+                                android:textSize="14sp" />
+
+                            <View
+                                android:id="@+id/line2"
+                                android:layout_width="0.8dp"
+                                android:layout_height="50dp"
+                                android:layout_below="@+id/tv_or"
+                                android:layout_centerHorizontal="true"
+                                android:background="@color/mds_bluegrey_600" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="13dp"
+                        android:elevation="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <Button
+                            android:id="@+id/btn_icq50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/button_rounded_new"
+                            android:elevation="10dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp"
+                            android:text="Start Chat"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_fee11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="7dp"
+                                android:fontFamily="sans-serif"
+                                android:text=""
+                                android:textColor="@color/mds_bluegrey_600"
+                                android:textSize="17sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_for50hrs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center"
+                            android:text="For 50 hours"
+                            android:textColor="@color/orange_800"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/note_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ftrack_status_rounded"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/note" />
+
+                    <TextView
+                        android:id="@+id/new_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text=" Note: You will receive an E-mail and SMS notification once your query is answered."
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/recc_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/layout_rounded_corner"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_paytm"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_rounded_green"
+                    android:gravity="center"
+                    android:text="Paytm"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+                    android:text="We recommend for you"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/grey_300"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/netcheck_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/internet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Seems like you are not connected to the internet. Please try and reload."
+            android:textColor="@color/grey_700"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_reload"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/reload"
+            android:padding="20dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/nolayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/nothing_query_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Something went wrong. Please Logoff and Login to view the Query"
+            android:textColor="@color/grey_700"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mds_bluegrey_100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBarLayout"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_speciality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Dermatology"
+                    android:visibility="gone"
+                    android:textColor="@color/mds_bluegrey_600"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="sans-serif"
+                    android:text="2 hours ago"
+                    android:visibility="gone"
+                    android:textColor="@color/mds_bluegrey_600"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/article_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:text="Query Title Add the dependency (available from mavenCentral and Add the dependency (available from mavenCentral and"
+                android:textColor="@color/mds_bluegrey_800"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/grey_200" />
+
+            <ImageView
+                android:id="@+id/img_qasebanner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="7dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/feed_images2"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/article_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:maxLines="3"
+                android:text="Query Title Add the dependency (available from mavenCentral and Add the dependency (available from mavenCentral and Query Title Add the dependency (available from mavenCentral and "
+                android:textColor="@color/mds_bluegrey_600"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageview_poster"
+                        android:layout_width="40dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/alok" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/share_layout"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageview_poster"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_docname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:maxLines="1"
+                            android:text="Dr. Madhan Kumar"
+                            android:textColor="@color/mds_bluegrey_600"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_docspec"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif"
+                            android:maxLines="1"
+                            android:visibility="gone"
+                            android:text="Familiy Physician/Dietitian"
+                            android:textColor="@color/mds_bluegrey_600"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/share_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:onClick="onArticlesClick"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/share_icon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="centerCrop"
+                            android:layout_toLeftOf="@+id/share_word"
+                            android:src="@mipmap/share_grey_up" />
+
+                        <TextView
+                            android:id="@+id/share_word"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:text="Share"
+                            android:textColor="@color/mds_bluegrey_700"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_share_url"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_docname_share"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tv_comments_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="55 comments"
+                    android:visibility="gone"
+                    android:textColor="@color/mds_bluegrey_600"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/like_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@+id/share_layout"
+                    android:onClick="onSeenClick"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/like_butt"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="1dp"
+                        android:src="@mipmap/like_grey" />
+
+                    <ImageView
+                        android:id="@+id/like_butt_fill"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="1dp"
+                        android:src="@mipmap/like_fill"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_vertical"
+                        android:text="Like"
+                        android:textColor="@color/mds_bluegrey_700"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <!-- <LinearLayout
+                     android:id="@+id/comment_layout"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_toLeftOf="@+id/share_layout"
+                     android:layout_centerVertical="true"
+                     android:layout_marginLeft="10dp"
+                     android:onClick="onSeenClick"
+                     android:orientation="horizontal"
+                     android:padding="8dp">
+
+                     <ImageView
+                         android:layout_width="15dp"
+                         android:layout_height="15dp"
+                         android:layout_gravity="bottom"
+                         android:src="@mipmap/comment_grey_new" />
+
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_vertical"
+                         android:layout_marginLeft="5dp"
+                         android:fontFamily="sans-serif"
+                         android:gravity="center_vertical"
+                         android:text="Comment"
+                         android:textColor="@color/mds_bluegrey_700"
+                         android:textSize="14sp" />
+
+                 </LinearLayout>-->
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

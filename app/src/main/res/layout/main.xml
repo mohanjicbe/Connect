@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/full_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_10"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@mipmap/toolbar_bg"
+                android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_collapseMode="parallax" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageview_poster"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/doctor_icon"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvdocname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Doctor Name"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvedu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvspec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/leftback"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_join"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:contentPadding="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/waiting_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Please wait... Video Chat screen is being opened."
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/calling_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+
+                        <TextView
+                            android:id="@+id/tv_jointips"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Already Doctor has started the Video Consultation. Please Join by tapping below button"
+                            android:textColor="@color/grey_900"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/btnJoinMeeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/button_rounded_green"
+                            android:gravity="center"
+                            android:onClick="onClickBtnJoinMeeting"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Join Video Consultation"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <!--<Button
+                            android:id="@+id/btn_joinvideocons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_rounded_green"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="Join Video Consultation"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:onClick="onClickBtnJoinMeeting"
+                            android:textSize="15sp" />
+    -->
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:contentPadding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/cons_image"
+                            android:layout_width="64dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/phone_cons_ico_color" />
+
+                        <com.skyfishjy.library.RippleBackground
+                            android:id="@+id/content"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:visibility="gone"
+                            app:rb_color="@color/blue_300"
+                            app:rb_duration="3000"
+                            app:rb_radius="10dp"
+                            app:rb_rippleAmount="4"
+                            app:rb_scale="6">
+
+                            <ImageView
+                                android:id="@+id/cons_image2"
+                                android:layout_width="64dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                android:background="@mipmap/phone_cons_ico_color" />
+
+                        </com.skyfishjy.library.RippleBackground>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical|left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_schedule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Schedule"
+                                android:textColor="@color/grey_900"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_marginTop="3dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/black_line" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Date: "
+                                    android:textColor="@color/grey_900"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/tvdate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="10/10/2019"
+                                    android:textColor="@color/grey_900"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif"
+                                    android:text="Time: "
+                                    android:textColor="@color/grey_900"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/tvtime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text="01:30 PM"
+                                    android:textColor="@color/grey_900"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="true"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Status"
+                                android:textColor="@color/grey_900"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_marginTop="3dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/black_line" />
+
+                            <TextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="sans-serif"
+                                android:text=""
+                                android:textColor="@color/orange_700"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/tv_query_head"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Query: "
+                                android:textColor="@color/grey_900"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_marginTop="3dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/black_line" />
+
+                            <TextView
+                                android:id="@+id/tvquery"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Helping several thousands of users everyday with health issues from Psychiatry, Radiology, Dermatology, OB/GYN, Oncology and 80+ other specialities."
+                                android:textColor="@color/grey_900"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+                            <com.github.ksoichiro.android.observablescrollview.ObservableWebView
+                                android:id="@+id/webview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/appBarLayout" />
+
+
+                            <Button
+                                android:id="@+id/btn_prescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/button_rounded"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:text="View Prescription"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+
+
+                            <LinearLayout
+                                android:id="@+id/files_full_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:onClick="onClick"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/layout_attachfile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="13dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/button_border_blue">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:id="@+id/img_preview"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_gravity="center"
+                                            android:src="@mipmap/attach_icon" />
+
+                                        <TextView
+                                            android:id="@+id/tvattached"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_toRightOf="@+id/img_preview"
+                                            android:text="Attached files :"
+                                            android:textColor="@color/mds_bluegrey_900"
+                                            android:textSize="13sp"
+                                            android:textStyle="bold|italic" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_filename"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toRightOf="@+id/tvattached"
+                                            android:text="sample"
+                                            android:textSize="10dp"
+                                            android:visibility="gone" />
+
+                                        <ImageView
+                                            android:id="@+id/img_arr"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_gravity="center"
+                                            android:src="@mipmap/right_new" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_notes_head"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Notes from Doctor: "
+                                android:textColor="@color/grey_900"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dip"
+                                android:layout_marginTop="3dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/black_line" />
+
+                            <TextView
+                                android:id="@+id/tvnotes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Helping several thousands of users everyday with health issues from Psychiatry, Radiology, Dermatology, OB/GYN, Oncology and 80+ other specialities."
+                                android:textColor="@color/grey_900"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/edtMeetingNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:maxLength="13"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtMeetingPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:hint="Meeting Password(For join meeting only)"
+            android:imeOptions="actionNext|flagNoExtractUi"
+            android:visibility="gone">
+
+        </EditText>
+
+
+    </LinearLayout>
+
+
+    <!-- <EditText
+         android:id="@+id/edtMeetingNo"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:focusable="true"
+         android:hint="zm_hint_meeting_number"
+         android:imeOptions="actionNext|flagNoExtractUi"
+         android:maxLength="13">
+
+         <requestFocus />
+     </EditText>
+
+     <EditText
+         android:id="@+id/edtMeetingPassword"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:focusable="true"
+         android:hint="Meeting Password(For join meeting only)"
+         android:imeOptions="actionNext|flagNoExtractUi">
+
+     </EditText>-->
+
+
+</LinearLayout>

@@ -1,0 +1,469 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/toolbar_bg"
+        android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/toolbar_style">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/horizontal_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_toptitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Book a Consultation"
+                    android:textColor="@color/mds_bluegrey_700"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="2dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="100dp"
+                    android:background="@color/mds_bluegrey_700" />
+
+                <TextView
+                    android:id="@+id/tv_toptdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Enter your query here.."
+                    android:textColor="@color/mds_bluegrey_800"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textview_rounded_corner_qtitle"
+                        android:fontFamily="sans-serif"
+                        android:text="Ask the Doctor"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                    <EditText
+                        android:id="@+id/edt_query"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/answeredittext2"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:hint="Type your health query here.."
+                        android:inputType="textMultiLine"
+                        android:isScrollContainer="true"
+                        android:minHeight="120dp"
+                        android:padding="10dp"
+                        android:textColor="@color/mds_bluegrey_800"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="left"
+                        android:text="Select your consultation preference"
+                        android:textColor="@color/mds_bluegrey_700"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/ftrack_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/track1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <RadioButton
+                                android:id="@+id/time_band1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:button="@drawable/radio_select"
+                                android:checked="false"
+                                android:gravity="center" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:layout_marginLeft="3dp"
+                                android:background="@color/white"
+                                android:gravity="center_vertical|left"
+                                android:orientation="vertical"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/tv_askqtit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:text="Ask a Text Query"
+                                    android:textColor="@color/mds_bluegrey_900"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:id="@+id/tv_askqsub"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="Send a text query with file attachments"
+                                    android:textColor="@color/mds_bluegrey_800"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:id="@+id/tv_qfee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text=""
+                                    android:textColor="@color/mds_bluegrey_900"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@color/mds_bluegrey_300" />
+
+                        <LinearLayout
+                            android:id="@+id/track2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/time_band2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:button="@drawable/radio_select"
+                                android:checked="true"
+                                android:gravity="center" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:layout_marginLeft="3dp"
+                                android:background="@color/white"
+                                android:gravity="center_vertical|left"
+                                android:orientation="vertical"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/opt_phonecons"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:text="Phone Consultation"
+                                    android:textColor="@color/mds_bluegrey_900"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:id="@+id/opt_phonecons2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="Schedule for your preferred date/time"
+                                    android:textColor="@color/mds_bluegrey_800"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_pfee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text=""
+                                    android:textColor="@color/mds_bluegrey_900"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@color/mds_bluegrey_300" />
+
+
+                        <LinearLayout
+                            android:id="@+id/track3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/time_band3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:button="@drawable/radio_select"
+                                android:checked="false"
+                                android:gravity="center" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:layout_marginLeft="3dp"
+                                android:background="@color/white"
+                                android:gravity="center_vertical|left"
+                                android:orientation="vertical"
+                                android:padding="3dp">
+
+
+                                <TextView
+                                    android:id="@+id/opt_videocons"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="sans-serif-medium"
+                                    android:text="Video Consultation"
+                                    android:textColor="@color/mds_bluegrey_900"
+                                    android:textSize="15sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:id="@+id/opt_videocons2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="Schedule for your preferred date/time"
+                                    android:textColor="@color/mds_bluegrey_800"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+
+                                <TextView
+                                    android:id="@+id/tv_vfee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:fontFamily="sans-serif"
+                                    android:text=""
+                                    android:textColor="@color/mds_bluegrey_900"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/button_rounded"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Submit &amp; Continue"
+                        android:textAllCaps="false"
+                        android:textColor="@color/mds_bluegrey_50"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvqfee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/textview_rounded_corner_quest"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:text="Rs.350.00"
+                        android:textColor="@color/app_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/mds_bluegrey_300" />
+
+
+                <LinearLayout
+                    android:id="@+id/howitw_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:visibility="gone"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_askquery"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:text="How it Works?"
+                                android:textColor="@color/mds_bluegrey_700"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_sub_ask_query"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="sans-serif-light"
+                                android:text="Read the instruction of consultation"
+                                android:textColor="@color/mds_bluegrey_800"
+                                android:textSize="14dp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/right" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/grey_500" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

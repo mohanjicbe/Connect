@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="212dp"
+            android:layout_height="190dp"
+            android:src="@mipmap/hospital_logo2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Welcome to iCliniq Connect"
+            android:textColor="@color/mds_bluegrey_900"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:padding="2dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Get answers to your pressing health concerns from top specialists of Sri Ramakrishna Hospital . Post your health query or book a video consultation."
+            android:textColor="@color/mds_bluegrey_900"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_started"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_rounded"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Let's Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
