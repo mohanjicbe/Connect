@@ -137,6 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
+
                     android:orientation="vertical"
                     android:padding="10dp">
 
@@ -155,7 +156,7 @@
                     <Button
                         android:id="@+id/btn_attach"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/blue_border_button"
                         android:elevation="10dp"
@@ -172,6 +173,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
+                        android:visibility="gone"
                         android:orientation="horizontal">
 
                         <View
@@ -189,6 +191,7 @@
                             android:layout_gravity="left|center_vertical"
                             android:layout_marginLeft="10dp"
                             android:fontFamily="sans-serif-light"
+                            android:visibility="gone"
                             android:gravity="left|center_vertical"
                             android:text="Doctors take more effort to read your reports/photos. So queries with reports have to be posted as a Paid query (Rs.199)"
                             android:textColor="@color/black"

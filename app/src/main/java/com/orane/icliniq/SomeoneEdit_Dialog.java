@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -91,11 +92,12 @@ public class SomeoneEdit_Dialog extends AppCompatActivity implements
         tit_id = intent.getStringExtra("tit_id");
         mem_name = intent.getStringExtra("mem_name");
         rel_val = intent.getStringExtra("rel_val");
-        dob_val = intent.getStringExtra("dob");
+        dob_val = intent.getStringExtra("dob_val");
         age_val = intent.getStringExtra("age_val");
         gender_val = intent.getStringExtra("gender_val");
         height_val = intent.getStringExtra("height_val");
         weight_val = intent.getStringExtra("weight_val");
+
 
         System.out.println("radio_id--------------" + radio_id);
         System.out.println("tit_id--------------" + tit_id);
@@ -154,6 +156,7 @@ public class SomeoneEdit_Dialog extends AppCompatActivity implements
         //---------------------------------------
 
         if (dob_val != null && !dob_val.isEmpty() && !dob_val.equals("null") && !dob_val.equals("")) {
+            Log.e("dob value",dob_val+"  ");
             btn_date.setText(dob_val);
             cons_select_date = dob_val;
         } else {

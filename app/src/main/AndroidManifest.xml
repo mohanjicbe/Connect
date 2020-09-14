@@ -3,21 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.orane.icliniq">
 
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.STORAGE" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS " />
-
     <application
-        android:name=".MyApp"
+        android:name="com.orane.icliniq.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
@@ -27,469 +14,339 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
-
         <activity
-            android:name=".SplashActivity"
+            android:name="com.orane.icliniq.utils.SpecialistListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.utils.ViewAllTransactions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.utils.WalletDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@mipmap/logo" />
-
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/app_color" />
-
-        <service android:name=".MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-
-        <service android:name=".MyFirebaseMessagingService">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
-        </service>
-
-        <provider
-            android:name=".fileattach_library.ExtendedFileProvider"
-            android:authorities="${applicationId}.easyphotopicker.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/filepaths" />
-
-        </provider>
-
-        <meta-data
-            android:name="applovin.sdk.key"
-            android:value="Kdid-IfMS7M48LTEZCTgRKFIoaJPt-gCcOqbgUy8cIDlegzCuRuJn7bZiwzauenU1a4i40rgJ2PykN9bp1vZ8U" />
-
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-
         <activity
-            android:name=".Answeres_Activity"
+            android:name="com.orane.icliniq.Answeres_Activity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Connect_get_started"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Connect_Hosp_Select"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Connect_Home_Actvity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".chime.InMeetingActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".chime.MeetingHomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".Voxeet"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Voxeet_New"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".Invoice_Page_New"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Comments_ListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Ratting_activity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Offers_view"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".ExpandableActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Offers_List_activity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Referal_Activity"
+            android:name="com.orane.icliniq.Connect_get_started"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".FeedbackActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Prescriptions_Activity"
+            android:name="com.orane.icliniq.Connect_Hosp_Select"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Prescription_Entry_Activity"
+            android:name="com.orane.icliniq.Connect_Home_Actvity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SomeoneEdit_Dialog"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".WebViewActivity_Persona"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Attachment_Screen_Activity"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".CenterFabActivity"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Labtest_WebViewActivity"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".OTPActivity_PromoCode"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".FamilyProfileListActivity"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Prelogin_Activity"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Doc_Consultation_Screen"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Attachment_WebViewActivity"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-
-        <activity
-            android:name=".Image_Preview"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Labtest.Labtest_tabs_Activity"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Video_WebViewActivity"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Ask_FamilyProfile"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <!--<activity
-            android:name=".Invoice_Page_New"
-
-            android:theme="@style/AppTheme.NoActionBar" />-->
-
-        <activity
-            android:name=".Labtest.TestListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-
-        <activity
-            android:name=".Stripewebview_Activity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Attached_List_Activity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".InboxActivity"
-
+            android:name="com.orane.icliniq.chime.InMeetingActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Inbox_view"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".TransactionsListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Manage_Subscriptions"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Prescription_WebViewActivity"
+            android:name="com.orane.icliniq.chime.MeetingHomeActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
-            android:name=".Labtest.Labtest_Beneficiary"
+            android:name="com.orane.icliniq.Voxeet"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".Labtest.Labtest_CartViewActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Agencies_List_Activity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".IntroScreenActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".MyDoctorsActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".attachment_view.GridViewActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".Instant_Chat"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".CommonActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-
-        <activity
-            android:name=".WalletTransactions"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".QADetailNew"
+            android:name="com.orane.icliniq.Voxeet_New"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
-
-
         <activity
-            android:name=".Search_Screen"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".ArticleViewActivity"
+            android:name="com.orane.icliniq.Invoice_Page_New"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".Parallex.ParallexMainActivity"
+            android:name="com.orane.icliniq.Comments_ListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".Webview_Facebook_Activity"
+            android:name="com.orane.icliniq.Ratting_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Offers_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.ExpandableActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Offers_List_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Referal_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.FeedbackActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Prescriptions_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Prescription_Entry_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.SomeoneEdit_Dialog"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.WebViewActivity_Persona"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Attachment_Screen_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.CenterFabActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Labtest_WebViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.OTPActivity_PromoCode"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.FamilyProfileListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Prelogin_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Doc_Consultation_Screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Attachment_WebViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Image_Preview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Labtest.Labtest_tabs_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Video_WebViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Ask_FamilyProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Labtest.TestListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Stripewebview_Activity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".QueryActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".ForgotPwdActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".Sqlite.NotificationListActivity"
+            android:name="com.orane.icliniq.Attached_List_Activity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".OTPSignupActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".OTPActivity"
+            android:name="com.orane.icliniq.InboxActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".NotificationViewActivity"
+            android:name="com.orane.icliniq.Inbox_view"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Invite_doctors"
+            android:name="com.orane.icliniq.TransactionsListActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".File_Upload_Screen"
+            android:name="com.orane.icliniq.Manage_Subscriptions"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HotlineHome"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name="com.orane.icliniq.Prescription_WebViewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <!--
+<activity
+            android:name=".Invoice_Page_New"
 
-        <activity
-            android:name=".Consultation_Home"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        -->
         <activity
-            android:name=".PrePackActivity"
+            android:name="com.orane.icliniq.Labtest.Labtest_Beneficiary"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".zoom.Video_Calling_Activity"
+            android:name="com.orane.icliniq.Labtest.Labtest_CartViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Agencies_List_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.IntroScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.MyDoctorsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.attachment_view.GridViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Instant_Chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.CommonActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.WalletTransactions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.QADetailNew"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.Search_Screen"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.ArticleViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Parallex.ParallexMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Webview_Facebook_Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.QueryActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.ForgotPwdActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.Sqlite.NotificationListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.OTPSignupActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.OTPActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.NotificationViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Invite_doctors"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.File_Upload_Screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.HotlineHome"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Consultation_Home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.PrePackActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.zoom.Video_Calling_Activity"
             android:launchMode="standard"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".zoom.Consultation_View"
+            android:name="com.orane.icliniq.zoom.Consultation_View"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ThankyouActivity"
+            android:name="com.orane.icliniq.ThankyouActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HotlinePackagesActivity"
+            android:name="com.orane.icliniq.HotlinePackagesActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".UploadToHotlineServer"
+            android:name="com.orane.icliniq.UploadToHotlineServer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HotlineChatViewActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".HotlineDoctorsQueriesActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".HotlineDoctorsActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Doc_Consultation1"
+            android:name="com.orane.icliniq.HotlineChatViewActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Consultation2"
+            android:name="com.orane.icliniq.HotlineDoctorsQueriesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.HotlineDoctorsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Doc_Consultation1"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".FileChooserBookingActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".UploadBookingToServer"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".BookingViewActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".BookingListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".ConsultationListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Consultation1"
+            android:name="com.orane.icliniq.Consultation2"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Consultation3"
+            android:name="com.orane.icliniq.FileChooserBookingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.UploadBookingToServer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.BookingViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.BookingListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.ConsultationListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Consultation1"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".TimeZoneActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".DoctorProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".SubscriptionPackActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name=".QueryViewActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".Patient_Profile_Activity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" />
-
-        <!--        <activity
-                    android:name="com.razorpay.CheckoutActivity"
-                    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-                    android:theme="@style/AppTheme.NoActionBar" />-->
-        <!--        <activity
-                    android:name="com.paytm.pgsdk.PaytmPGActivity"
-                    android:configChanges="keyboardHidden|orientation|keyboard"
-                    android:screenOrientation="portrait" />-->
-        <activity
-            android:name=".DoctorsListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".FileChooserActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <!--        <activity
-                    android:name=".ArticleDetailActivity"
-                    android:theme="@style/AppTheme.NoActionBar" />-->
-        <activity
-            android:name=".SignupActivity"
+            android:name="com.orane.icliniq.Consultation3"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".NotificationsActivity"
+            android:name="com.orane.icliniq.TimeZoneActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ShareToFriends"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+            android:name="com.orane.icliniq.DoctorProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Terms_WebViewActivity"
+            android:name="com.orane.icliniq.SubscriptionPackActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.QueryViewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.Patient_Profile_Activity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.DoctorsListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.FileChooserActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.SignupActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.orane.icliniq.NotificationsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.ShareToFriends"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.Terms_WebViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
-            android:name=".Connect_hosp_list"
+            android:name="com.orane.icliniq.Connect_hosp_list"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar" />
-
-
         <activity
-            android:name=".Deeplinks.DeepLinkActivityVideoCons"
+            android:name="com.orane.icliniq.Deeplinks.DeepLinkActivityVideoCons"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -503,8 +360,20 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
+        <!--
         <activity
-            android:name=".Deeplinks.DeepLinkActivityPwd"
+                    android:name="com.razorpay.CheckoutActivity"
+                    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                    android:theme="@style/AppTheme.NoActionBar" />
+        -->
+        <!--
+        <activity
+                    android:name="com.paytm.pgsdk.PaytmPGActivity"
+                    android:configChanges="keyboardHidden|orientation|keyboard"
+                    android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name="com.orane.icliniq.Deeplinks.DeepLinkActivityPwd"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -518,11 +387,9 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".Deeplinks.DeepLinkActivityArticles"
+            android:name="com.orane.icliniq.Deeplinks.DeepLinkActivityArticles"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -534,14 +401,15 @@
                     android:pathPrefix="/articles"
                     android:scheme="https" />
             </intent-filter>
-
         </activity>
-
-
+        <!--
         <activity
-            android:name=".Deeplinks.DeepLinkActivityQA"
+                    android:name=".ArticleDetailActivity"
+                    android:theme="@style/AppTheme.NoActionBar" />
+        -->
+        <activity
+            android:name="com.orane.icliniq.Deeplinks.DeepLinkActivityQA"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -553,13 +421,34 @@
                     android:pathPrefix="/qa"
                     android:scheme="https" />
             </intent-filter>
-
         </activity>
+        <activity
+            android:name="com.orane.icliniq.SpecialityListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.AskQuery1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orane.icliniq.AskQuery2"
+            android:theme="@style/AppTheme.NoActionBar" />
 
-
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/app_color" />
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="Kdid-IfMS7M48LTEZCTgRKFIoaJPt-gCcOqbgUy8cIDlegzCuRuJn7bZiwzauenU1a4i40rgJ2PykN9bp1vZ8U" />
         <!--
-
-
          <activity
              android:name=".Deeplinks.DeepLinkActivityAskDoctor"
              android:theme="@style/AppTheme.NoActionBar">
@@ -576,38 +465,49 @@
 
          </activity>
         -->
-
-        <activity
-            android:name=".SpecialityListActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".WebViewActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <!--        <activity
-                    android:name=".MyWalletActivity"
-                    android:theme="@style/AppTheme.NoActionBar" />-->
-
-        <activity
-            android:name=".AskQuery1"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".AskQuery2"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="cc53deb84851c3c6ee51f3c400c51e251432482b" />
+        <!--
+        <activity
+                    android:name=".MyWalletActivity"
+                    android:theme="@style/AppTheme.NoActionBar" />
+        -->
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
 
-        <!--        <receiver
+        <provider
+            android:name="com.orane.icliniq.fileattach_library.ExtendedFileProvider"
+            android:authorities="${applicationId}.easyphotopicker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <receiver android:name="com.orane.icliniq.SmsBroadcastReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.provider.Telephony.SMS_RECEIVED"
+                    android:priority="2147483647" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.orane.icliniq.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+        <receiver
                     android:name="com.google.android.gms.gcm.GcmReceiver"
                     android:exported="true"
                     android:permission="com.google.android.c2dm.permission.SEND">
@@ -615,13 +515,15 @@
                         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                         <category android:name="com.orane.icliniq" />
                     </intent-filter>
-                </receiver>-->
-
-        <meta-data
-            android:name="com.onesignal.NotificationOpened.DEFAULT"
-            android:value="DISABLE" />
-
-        <!--   <service
+                </receiver>
+        -->
+        <service android:name="com.orane.icliniq.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+   <service
                android:name=".PushNotificationService"
                android:exported="false">
                <intent-filter>
@@ -637,9 +539,10 @@
                    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                    <category android:name="com.orane.docassist" />
                </intent-filter>
-           </receiver>-->
-
-        <!--  <receiver
+           </receiver>
+        -->
+        <!--
+  <receiver
               android:name="com.google.android.gms.analytics.AnalyticsReceiver"
               android:enabled="true">
               <intent-filter>
@@ -666,14 +569,23 @@
                   <action android:name="com.android.vending.INSTALL_REFERRER" />
               </intent-filter>
           </receiver>
-  -->
-        <receiver android:name=".SmsBroadcastReceiver">
-            <intent-filter>
-                <action
-                    android:name="android.provider.Telephony.SMS_RECEIVED"
-                    android:priority="2147483647" />
-            </intent-filter>
-        </receiver>
+        -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS " />
 
 </manifest>

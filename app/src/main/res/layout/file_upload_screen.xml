@@ -179,6 +179,7 @@
                         <TextView
                             android:id="@+id/tv_attach_warn"
                             android:layout_width="match_parent"
+                            android:visibility="gone"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left|center_vertical"
                             android:layout_marginLeft="10dp"

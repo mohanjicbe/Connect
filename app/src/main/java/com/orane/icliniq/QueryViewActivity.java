@@ -2228,6 +2228,17 @@ public class QueryViewActivity extends BaseActivity implements ObservableScrollV
         btn_pay.startAnimation(shake);
         btn_ftrack.startAnimation(shake);
         //------------------ Button Animation -------------------------
+
+        if((Model.query_launch).equals("ratting_activity")){
+            Model.query_launch="";
+
+            String full_url = Model.BASE_URL + "sapp/viewq?id=" + qid + "&user_id=" + (Model.id) + "&format=json&token=" + Model.token + "&enc=1&isAFiles=1";
+            System.out.println("Viewq url-------------" + full_url);
+            new Query_View_AsyncTask().execute(full_url);
+
+
+        }
+
     }
 
 /*    public void onClickFile(View v) {

@@ -104,8 +104,8 @@ public class ThankyouActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else {
-                        //Intent intent = new Intent(ThankyouActivity.this, Connect_Home_Actvity.class);
-                        //startActivity(intent);
+                        Intent intent = new Intent(ThankyouActivity.this, Connect_Home_Actvity.class);
+                        startActivity(intent);
                         finish();
                     }
                 } catch (Exception e) {

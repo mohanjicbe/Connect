@@ -220,7 +220,7 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(SignupActivity.this, Terms_WebViewActivity.class);
-                i.putExtra("url", Model.BASE_URL + "p/terms?nolayout=1");
+                i.putExtra("url", Model.Basic_server + "pages/display/page/terms?nolayout=1");
                 i.putExtra("type", "Terms of use");
                 startActivity(i);
             }
@@ -231,7 +231,7 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(SignupActivity.this, Terms_WebViewActivity.class);
-                i.putExtra("url", Model.BASE_URL + "p/privacy?nolayout=1");
+                i.putExtra("url", Model.Basic_server + "p/privacy?nolayout=1");
                 i.putExtra("type", "privacy policy");
                 startActivity(i);
             }

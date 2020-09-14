@@ -31,7 +31,6 @@ import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
 import com.orane.icliniq.ExpandableActivity;
 import com.orane.icliniq.LoginActivity;
 import com.orane.icliniq.Model.Model;
-import com.orane.icliniq.Prescription_Entry_Activity;
 import com.orane.icliniq.Prescription_WebViewActivity;
 import com.orane.icliniq.R;
 import com.orane.icliniq.Voxeet;

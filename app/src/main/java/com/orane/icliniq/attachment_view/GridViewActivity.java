@@ -28,7 +28,6 @@ import com.downloader.Progress;
 import com.flurry.android.FlurryAgent;
 import com.kissmetrics.sdk.KISSmetricsAPI;
 import com.obsez.android.lib.filechooser.ChooserDialog;
-import com.orane.icliniq.Attachment_WebViewActivity;
 import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.Model.Utils;
 import com.orane.icliniq.R;

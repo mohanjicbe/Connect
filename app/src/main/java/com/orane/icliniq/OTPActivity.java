@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,7 +34,6 @@ import android.widget.Toast;
 import com.flurry.android.FlurryAgent;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.orane.icliniq.Model.Model;
-import com.orane.icliniq.fileattach_library.EasyImage;
 import com.orane.icliniq.network.JSONParser;
 
 import org.json.JSONObject;

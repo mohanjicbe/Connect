@@ -9,11 +9,10 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,11 +34,8 @@ import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCal
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.kissmetrics.sdk.KISSmetricsAPI;
-import com.orane.icliniq.AskQuery1;
 import com.orane.icliniq.DoctorProfileActivity;
 import com.orane.icliniq.HotlinePackagesActivity;
-import com.orane.icliniq.IntroScreenActivity;
 import com.orane.icliniq.Invite_doctors;
 import com.orane.icliniq.LoginActivity;
 import com.orane.icliniq.Model.BaseActivity;
@@ -47,10 +43,10 @@ import com.orane.icliniq.Model.Item;
 import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.Parallex.ParallexMainActivity;
 import com.orane.icliniq.R;
-import com.orane.icliniq.SpecialityListActivity;
 import com.orane.icliniq.adapter.MyDoctorsRowAdapter;
 import com.orane.icliniq.network.JSONParser;
 import com.orane.icliniq.network.NetCheck;
+import com.orane.icliniq.utils.SpecialistListActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -226,7 +222,10 @@ public class MyDoctorsActivity extends BaseActivity implements ObservableScrollV
         spec_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyDoctorsActivity.this, SpecialityListActivity.class);
+//                Intent intent = new Intent(MyDoctorsActivity.this, SpecialityListActivity.class);
+//                startActivity(intent);
+
+                Intent intent = new Intent(MyDoctorsActivity.this, SpecialistListActivity.class);
                 startActivity(intent);
             }
         });

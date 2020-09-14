@@ -8,13 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.orane.icliniq.Model.Item;
-import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 

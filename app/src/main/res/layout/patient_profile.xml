@@ -618,7 +618,7 @@
                             android:padding="5dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="Please wait. While reading OTP SMS Automatically..."
+                            android:text="Please wait"
                             android:textColor="@color/blue_900"
                             android:textSize="13sp" />
 

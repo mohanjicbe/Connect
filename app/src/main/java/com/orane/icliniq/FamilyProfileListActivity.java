@@ -6,8 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.ScaleDrawable;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -15,25 +13,20 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -67,8 +60,6 @@ import java.util.List;
 import java.util.Map;
 
 import me.drakeet.materialdialog.MaterialDialog;
-
-import static android.widget.NumberPicker.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL;
 
 public class FamilyProfileListActivity extends AppCompatActivity implements ObservableScrollViewCallbacks, AAH_FabulousFragment.Callbacks {
 
@@ -1058,7 +1049,7 @@ public class FamilyProfileListActivity extends AppCompatActivity implements Obse
                 weight_val = fam_obj.getString("weight");
 
                 tit_val = tit_id;
-
+        
                 System.out.println("tit_id-1--------------" + tit_id);
                 System.out.println("mem_name 1---------------" + mem_name);
                 System.out.println("rel_type 1---------------" + rel_val);
@@ -1067,7 +1058,7 @@ public class FamilyProfileListActivity extends AppCompatActivity implements Obse
                 System.out.println("gender_val- 1--------------" + gender_val);
                 System.out.println("height_val-1--------------" + height_val);
                 System.out.println("weight_val---------------" + weight_val);
-
+                Log.e("dob valu in family  ",dob_val+"  ");
 
                 Intent intent = new Intent(FamilyProfileListActivity.this, SomeoneEdit_Dialog.class);
                 intent.putExtra("add_type", "edit");

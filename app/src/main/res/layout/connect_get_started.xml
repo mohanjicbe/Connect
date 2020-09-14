@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="212dp"
             android:layout_height="190dp"
-            android:src="@mipmap/hospital_logo2" />
+            android:src="@mipmap/logo1" />
 
         <TextView
             android:layout_width="match_parent"
@@ -46,7 +46,7 @@
             android:padding="2dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="Get answers to your pressing health concerns from top specialists of Sri Ramakrishna Hospital . Post your health query or book a video consultation."
+            android:text="Get your health problems addressed by experienced specialists from nearby hospitals . Post your health query or book a video consultation."
             android:textColor="@color/mds_bluegrey_900"
             android:textSize="13sp"
             android:visibility="visible" />

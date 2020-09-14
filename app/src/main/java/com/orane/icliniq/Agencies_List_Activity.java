@@ -20,7 +20,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.kissmetrics.sdk.KISSmetricsAPI;
 import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.network.JSONParser;
 

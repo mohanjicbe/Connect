@@ -25,8 +25,9 @@ public class Model {
     public static String hosp_domain,hosp_logo, hosp_name;
 
     public static String BASE_URL;
-    //public static String Basic_server = "https://www.icliniq.com/";
-    public static String Basic_server = "https://pentest.icliniq.com/";
+    public static String Basic_server = "https://www.icliniq.com/";
+//    public static String Basic_server = "https://pentest.icliniq.com/";
+
 
     //public static String BASE_URL = "http://192.168.0.114/icliniq-git/web/index.php/";
     //public static String BASE_URL = "https://www.icliniq.com/";

@@ -8,9 +8,7 @@ package com.orane.icliniq.chime
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
-import android.media.AudioManager
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +34,6 @@ import com.amazonaws.services.chime.sdk.meetings.utils.logger.ConsoleLogger
 import com.amazonaws.services.chime.sdk.meetings.utils.logger.LogLevel
 import com.google.android.material.tabs.TabLayout
 import com.google.gson.Gson
-import com.orane.icliniq.MainActivity
 import com.orane.icliniq.R
 import com.orane.icliniq.chime.data.AttendeeInfoResponse
 import com.orane.icliniq.chime.data.RosterAttendee
@@ -46,7 +43,6 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.lang.Runnable
 import java.net.HttpURLConnection
 import java.net.URL
 

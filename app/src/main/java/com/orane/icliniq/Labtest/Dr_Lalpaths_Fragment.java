@@ -8,7 +8,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.fragment.app.Fragment;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -26,7 +25,6 @@ import com.github.ksoichiro.android.observablescrollview.ObservableListView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.orane.icliniq.LoginActivity;
-import com.orane.icliniq.Model.BadgeCounter;
 import com.orane.icliniq.Model.Item;
 import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.R;

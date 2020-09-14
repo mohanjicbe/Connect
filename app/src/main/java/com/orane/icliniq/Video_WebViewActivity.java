@@ -22,7 +22,6 @@ import android.widget.TextView;
 
 import com.flurry.android.FlurryAgent;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
-import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.kissmetrics.sdk.KISSmetricsAPI;
 import com.orane.icliniq.Model.BaseActivity;

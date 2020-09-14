@@ -10,11 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.orane.icliniq.Model.ItemCons;
 import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.Parallex.libs.NotifyingScrollView;
 import com.orane.icliniq.Parallex.libs.ScrollViewFragment;
@@ -24,8 +22,6 @@ import com.orane.icliniq.network.JSONParser;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-
-import java.util.List;
 
 public class ArticlesFragment extends ScrollViewFragment {
 

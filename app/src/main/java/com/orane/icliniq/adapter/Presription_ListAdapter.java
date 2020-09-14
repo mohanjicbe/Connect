@@ -2,7 +2,6 @@ package com.orane.icliniq.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;

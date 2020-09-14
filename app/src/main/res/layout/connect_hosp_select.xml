@@ -118,17 +118,17 @@
 
                 <EditText
                     android:id="@+id/edt_hosp_code"
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
                     android:layout_weight="1"
+                    android:maxLines="1"
                     android:background="@drawable/answeredittext"
                     android:fontFamily="sans-serif"
                     android:gravity="bottom"
                     android:hint="Enter hospital code here"
                     android:imeOptions="actionDone"
                     android:inputType="text"
-                    android:padding="15dp"
+                    android:padding="10dp"
                     android:textSize="16dp"
                     android:textStyle="bold" />
 

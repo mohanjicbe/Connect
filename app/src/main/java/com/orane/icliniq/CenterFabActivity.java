@@ -696,7 +696,7 @@ public class CenterFabActivity extends AppCompatActivity {
                     Intent i = new Intent(Intent.ACTION_SEND);
                     i.setType("text/plain");
                     //i.putExtra(Intent.EXTRA_SUBJECT, ); "\n\n
-                    String sAux = "I found " + docname_share_val + " " + spec_new_val + " on iCliniq. #1 Online consultation app. \n\n View profile here : \n\n " + doclink;
+                    String sAux = "It is quick to consult doctor " + docname_share_val + " " + spec_new_val + " online at  iCliniq Connect. \n\n " + doclink;
                     i.putExtra(Intent.EXTRA_TEXT, sAux);
                     startActivity(Intent.createChooser(i, "choose one"));
 

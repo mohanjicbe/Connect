@@ -35,7 +35,6 @@ import com.orane.icliniq.Referal_Activity;
 import com.orane.icliniq.Terms_WebViewActivity;
 import com.orane.icliniq.Video_WebViewActivity;
 import com.orane.icliniq.WalletTransactions;
-import com.orane.icliniq.WebViewActivity;
 import com.orane.icliniq.network.JSONParser;
 import com.orane.icliniq.network.SetLanguage;
 import com.orane.icliniq.network.ShareIntent;

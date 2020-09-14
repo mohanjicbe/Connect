@@ -31,7 +31,6 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.kissmetrics.sdk.KISSmetricsAPI;
 import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.network.JSONParser;
-import com.orane.icliniq.network.NetCheck;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText;
 

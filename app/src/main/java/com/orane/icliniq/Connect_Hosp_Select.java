@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,7 +25,6 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.network.JSONParser;
-import com.orane.icliniq.zoom.Video_Calling_Activity;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;

@@ -172,7 +172,12 @@ public class Ask_FamilyProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                post_query();
+                if (radio_id != null && !radio_id.isEmpty() && !radio_id.equals("null")) {
+
+                    post_query();
+                }else{
+                    Toast.makeText(Ask_FamilyProfile.this, "Please Select Profile..", Toast.LENGTH_SHORT).show();
+                }
 
 /*                Intent intent = new Intent(Ask_FamilyProfile.this, AskQuery2.class);
                 intent.putExtra("qid", qid);
@@ -574,7 +579,15 @@ public class Ask_FamilyProfile extends AppCompatActivity {
                 String weight_text = fam_obj.getString("weight");
 
                 tv_fam_name.setText(name_text);
-                tv_fam_agedets.setText(relation_type_text + " - " + age_text + " - " + gender_text);
+                if (age_text != null && !age_text.isEmpty() && !age_text.equals("null") && !age_text.equals("0")) {
+                    if (gender_text != null && !gender_text.isEmpty() && !gender_text.equals("null") && !gender_text.equals("0")) {
+                        tv_fam_agedets.setText(relation_type_text + " - " + age_text + " - " + gender_text);
+                    }else
+                        tv_fam_agedets.setText(relation_type_text + " - " + age_text);
+                }else{
+                    tv_fam_agedets.setText(relation_type_text + " - " + age_text + " - " + gender_text);
+                }
+
                 tv_fam_height.setText("Height : " + height_text);
                 tv_fam_weight.setText("Weight : " + weight_text);
 

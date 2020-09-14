@@ -16,12 +16,10 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.orane.icliniq.Labtest_WebViewActivity;
 import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.R;

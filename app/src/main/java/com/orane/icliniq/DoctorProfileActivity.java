@@ -827,6 +827,7 @@ public class DoctorProfileActivity extends AppCompatActivity {
 
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
+
             sharingIntent.putExtra(Intent.EXTRA_TEXT, "It is quick to consult doctor " + Docname + " online at iCliniq. \n\n" + docurl);
             startActivity(Intent.createChooser(sharingIntent, "Share using"));
 

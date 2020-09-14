@@ -2,8 +2,6 @@ package com.orane.icliniq.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -18,7 +16,6 @@ import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.R;
 import com.squareup.picasso.Picasso;
 
-import java.net.URL;
 import java.util.List;
 
 public class ArticleListAdapter extends ArrayAdapter<Item> {

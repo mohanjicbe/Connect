@@ -22,9 +22,6 @@ import com.orane.icliniq.R;
 
 import java.io.File;
 
-import static android.app.Activity.RESULT_CANCELED;
-import static android.app.Activity.RESULT_OK;
-
 public class FileChooserActivity extends FragmentActivity implements
         FragmentManager.OnBackStackChangedListener, FileListFragment.Callbacks {
 

@@ -28,6 +28,7 @@ import com.orane.icliniq.Parallex.ParallexMainActivity;
 import com.orane.icliniq.adapter.DoctorsRowAdapter;
 import com.orane.icliniq.network.JSONParser;
 import com.orane.icliniq.utils.RetrofitService;
+import com.orane.icliniq.utils.WalletDetailsActivity;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -150,7 +151,7 @@ public class Connect_Home_Actvity extends AppCompatActivity {
 
         Integer year_val = Calendar.getInstance().get(Calendar.YEAR);
 
-        copyright_text.setText("Copyright \u00a9 " + year_val + " " + Model.hosp_name + " - All rights reserved");
+        copyright_text.setText("Copyright \u00a9 " + year_val + " " +"iCliniq " + " - All rights reserved");
 
         //------------------------------------------
         String url = Model.BASE_URL + "sapp/doctors?user_id=" + (Model.id) + "&page=1&sp_id=0&token=" + (Model.token) + "&enc=1";
@@ -312,8 +313,12 @@ public class Connect_Home_Actvity extends AppCompatActivity {
                                 case "My Hospitals":
                                     startActivity(new Intent(Connect_Home_Actvity.this, Connect_hosp_list.class));
                                     break;
-                                case "nav_family":
+                                case "My Family":
                                     startActivity(new Intent(Connect_Home_Actvity.this, FamilyProfileListActivity.class));
+
+                                    break;
+                                case "My Wallet":
+                                    startActivity(new Intent(Connect_Home_Actvity.this, WalletDetailsActivity.class));
 
                                     break;
                                 case "Logout":
@@ -394,15 +399,21 @@ public class Connect_Home_Actvity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 alertDialog.dismiss();
-                ShowDirections();
+                ShowDirections(txt_address.getText().toString());
             }
         });
     }
 
-    private void ShowDirections() {
-        String map = "http://maps.google.co.in/maps?q=" + "yourAddress";
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(map));
-        startActivity(intent);
+    private void ShowDirections(String address) {
+
+        Intent i = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("http://maps.google.com/maps?saddr="+"&daddr="+address+"&mode=driving"));
+//        i.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+        startActivity(i);
+
+//        String map = "http://maps.google.co.in/maps?q=" + "yourAddress";
+//        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(map));
+//        startActivity(intent);
     }
 
 
@@ -607,7 +618,7 @@ public class Connect_Home_Actvity extends AppCompatActivity {
                     Intent i = new Intent(Intent.ACTION_SEND);
                     i.setType("text/plain");
                     //i.putExtra(Intent.EXTRA_SUBJECT, ); "\n\n
-                    String sAux = "I found " + docname_share_val + " " + spec_new_val + " on iCliniq. #1 Online consultation app. \n\n View profile here : \n\n " + doclink;
+                    String sAux = "It is quick to consult doctor " + docname_share_val + " " + spec_new_val + " online at  iCliniq Connect. \n\n " + doclink;
                     i.putExtra(Intent.EXTRA_TEXT, sAux);
                     startActivity(Intent.createChooser(i, "choose one"));
 

@@ -9,17 +9,21 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -36,6 +40,9 @@ import com.orane.icliniq.Parallex.ParallexMainActivity;
 import com.orane.icliniq.adapter.DoctorsRowAdapter;
 import com.orane.icliniq.network.JSONParser;
 import com.orane.icliniq.network.NetCheck;
+import com.orane.icliniq.utils.RetrofitService;
+import com.orane.icliniq.utils.SpecialistListActivity;
+import com.orane.icliniq.utils.walletModel.SearchDoctorModel;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -48,6 +55,11 @@ import java.util.List;
 import java.util.Map;
 
 import me.drakeet.materialdialog.MaterialDialog;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DoctorsListActivity extends AppCompatActivity {
 
@@ -55,6 +67,8 @@ public class DoctorsListActivity extends AppCompatActivity {
     Item objItem;
     public List<Item> listArray;
     public List<Item> arrayOfList;
+    public List<Item> arrayOfSearch=new ArrayList<>();
+    public List<SearchDoctorModel> searchList;
     public File imageFile;
     JSONObject jsonobj_makefav, fav_jsonobj;
 
@@ -95,7 +109,7 @@ public class DoctorsListActivity extends AppCompatActivity {
     public String sub_url = "sapp/doctors";
     public boolean pagination = true;
     LinearLayout bg_layout;
-
+    Button btn_search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,11 +151,12 @@ public class DoctorsListActivity extends AppCompatActivity {
         nolayout = (LinearLayout) findViewById(R.id.nolayout);
         bg_layout = (LinearLayout) findViewById(R.id.bg_layout);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_query_new);
+        btn_search=findViewById(R.id.btn_search);
 
         is_fav = "1";
 
         full_process();
-
+        btn_search.setOnClickListener(v -> AlertBoxMethod());
         //----------------- Kissmetrics ----------------------------------
         Model.kiss = KISSmetricsAPI.sharedAPI(Model.kissmetric_apikey, getApplicationContext());
         Model.kiss.record("android.patient.Doctorlist");
@@ -172,13 +187,13 @@ public class DoctorsListActivity extends AppCompatActivity {
         });
 */
 
-        spec_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DoctorsListActivity.this, SpecialityListActivity.class);
-                startActivity(intent);
-            }
-        });
+//        spec_layout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(DoctorsListActivity.this, SpecialityListActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -301,6 +316,112 @@ public class DoctorsListActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void AlertBoxMethod() {
+        searchList=new ArrayList<>();
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.searchdoctor_alert, null);
+        dialogBuilder.setView(dialogView);
+        EditText txt_name=dialogView.findViewById(R.id.edt_name);
+        Button btn_cancel=dialogView.findViewById(R.id.btnCancel);
+        Button btnSearch=dialogView.findViewById(R.id.btnSearch);
+
+        AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.show();
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                if (txt_name.getText().toString().isEmpty()){
+                    Toast.makeText(DoctorsListActivity.this, "Please enter Name ", Toast.LENGTH_SHORT).show();
+                }else
+                 alertDialog.dismiss();
+                  SearchDoctor(txt_name.getText().toString());
+            }
+        });
+    }
+
+    private void SearchDoctor(String name) {
+        arrayOfSearch.clear();
+        searchList.clear();
+        ProgressDialog progressDialog=new ProgressDialog(this);
+        progressDialog.setMessage("Please Wait..");
+        progressDialog.show();
+        Model.select_spec_val="0";
+//       "?user_id=" + (Model.id) + "&page=1&sp_id=" + Model.select_spec_val + "&token=" + Model.token + "&enc=1"+"doc_name"+name;
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Model.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RetrofitService service = retrofit.create(RetrofitService.class);
+        service.searchDoctorDetails(Model.id,"1 ","0",Model.token,"1",name).enqueue(new Callback<List<SearchDoctorModel>>() {
+            @Override
+            public void onResponse(Call<List<SearchDoctorModel>> call, Response<List<SearchDoctorModel>> response) {
+                progressDialog.dismiss();
+                if (response.code()==200){
+                    Log.e("response",response.code()+" ");
+                    if (response.body() != null) {
+                        searchList.addAll(response.body());
+                        if(searchList!=null&&searchList.size()>0){
+                            Log.e("search name",searchList.get(0).getName()+"  ");
+                            Log.e("search name",searchList.get(0).getSpeciality()+"  ");
+                            for (int i=0;i<searchList.size();i++){
+                                Item item=new Item();
+                                item.setName(searchList.get(i).getName());
+//                                item.setName();
+                                item.setAmt (searchList.get(i).getAvgRating());
+                                item.setCfee(searchList.get(i).getCfee());
+                                item.setQfee(searchList.get(i).getQfee());
+                                item.setDocedu(searchList.get(i).getEdu());
+                                item.setDocurl(searchList.get(i).getDoctorUrl());
+                                item.setDocimage(searchList.get(i).getPhotoUrl());
+                                item.setArtTitle (searchList.get(i).getIsStar());
+                                item.setDocname(searchList.get(i).getName());
+                                item.setDocspec(searchList.get(i).getSpeciality());
+                                item.setDocid(searchList.get(i).getId());
+                                Log.e("arraysearch",searchList.get(i).getSpeciality()+" ");
+                                Log.e("arraysearch",searchList.get(i).getName()+" ");
+                                Log.e("arraysearch",searchList.get(i).getSpeciality()+" ");
+                                arrayOfSearch.add(item);
+                            }
+                                Log.e("arraysearch",arrayOfSearch.size()+" ");
+
+                            try {
+                                objAdapter = new DoctorsRowAdapter(DoctorsListActivity.this, R.layout.doctors_row, arrayOfSearch);
+                                listView.setAdapter(objAdapter);
+//                                objAdapter.notifyDataSetChanged();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }else{
+                    progressDialog.dismiss();
+                    Toast.makeText(DoctorsListActivity.this, "please enter correct name", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<SearchDoctorModel>> call, Throwable t) {
+                t.printStackTrace();
+                Toast.makeText(DoctorsListActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
 
     public void full_process() {
 
@@ -770,13 +891,9 @@ public class DoctorsListActivity extends AppCompatActivity {
         }
 
 
-        if (id == R.id.nav_refresh) {
+        if (id == R.id.nav_search) {
 
-            //---------------------------------------------
-            String refresh_url = Model.BASE_URL + sub_url + "?user_id=" + (Model.id) + "&page=1&sp_id=0&token=" + Model.token + "&enc=1";
-            System.out.println("refresh_url------------" + refresh_url);
-            new MyTask_server().execute(refresh_url);
-            //---------------------------------------------
+        AlertBoxMethod();
 
             return true;
         }
@@ -784,8 +901,12 @@ public class DoctorsListActivity extends AppCompatActivity {
         if (id == R.id.nav_specfilter) {
 
             //---------------------------------------------
-            Intent intent = new Intent(DoctorsListActivity.this, SpecialityListActivity.class);
+//            Intent intent = new Intent(DoctorsListActivity.this, SpecialityListActivity.class);
+//            startActivity(intent);
+//
+            Intent intent = new Intent(DoctorsListActivity.this, SpecialistListActivity.class);
             startActivity(intent);
+
             //finish();
             //---------------------------------------------
             return true;
@@ -798,7 +919,7 @@ public class DoctorsListActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-        if ((Model.query_launch).equals("SpecialityListActivity")) {
+        if ((Model.query_launch).equals("SpecialistListActivity")) {
 
             Model.query_launch = "";
 
@@ -1060,7 +1181,8 @@ public class DoctorsListActivity extends AppCompatActivity {
                     Intent i = new Intent(Intent.ACTION_SEND);
                     i.setType("text/plain");
                     //i.putExtra(Intent.EXTRA_SUBJECT, ); "\n\n
-                    String sAux = "I found " + docname_share_val + " " + spec_new_val + " on iCliniq. #1 Online consultation app. \n\n View profile here : \n\n " + doclink;
+                    String sAux = "It is quick to consult doctor " + docname_share_val + " " + spec_new_val + " online at  iCliniq Connect. \n\n " + doclink;
+
                     i.putExtra(Intent.EXTRA_TEXT, sAux);
                     startActivity(Intent.createChooser(i, "choose one"));
 

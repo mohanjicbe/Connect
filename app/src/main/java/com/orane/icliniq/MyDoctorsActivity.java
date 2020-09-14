@@ -3,18 +3,15 @@ package com.orane.icliniq;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,7 +26,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.allattentionhere.fabulousfilter.AAH_FabulousFragment;
 import com.flurry.android.FlurryAgent;
 import com.github.ksoichiro.android.observablescrollview.ObservableListView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
@@ -154,6 +150,7 @@ public class MyDoctorsActivity extends BaseActivity implements ObservableScrollV
         listView = (ObservableListView) findViewById(R.id.listview);
         bg_layout = (LinearLayout) findViewById(R.id.bg_layout);
         fab = (RelativeLayout) findViewById(R.id.fab);
+        fab.setVisibility(View.GONE);
 
         full_process();
 
@@ -217,7 +214,7 @@ public class MyDoctorsActivity extends BaseActivity implements ObservableScrollV
             }
         });
 */
-
+        btn_adddoc.setVisibility(View.GONE);
         btn_adddoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

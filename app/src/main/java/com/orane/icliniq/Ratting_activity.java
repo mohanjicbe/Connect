@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -424,6 +423,7 @@ public class Ratting_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 alert.dismiss();
+                Model.query_launch="ratting_activity";
                 finish();
             }
         });

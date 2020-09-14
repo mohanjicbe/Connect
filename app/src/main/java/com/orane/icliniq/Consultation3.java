@@ -36,7 +36,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.flurry.android.FlurryAgent;
@@ -46,7 +45,6 @@ import com.orane.icliniq.Model.Model;
 import com.orane.icliniq.Model.MultipartEntity2;
 import com.orane.icliniq.expand.ExpandableLayout;
 import com.orane.icliniq.file_picking.utils.FileUtils;
-import com.orane.icliniq.fileattach_library.DefaultCallback;
 import com.orane.icliniq.fileattach_library.EasyImage;
 import com.orane.icliniq.network.JSONParser;
 import com.orane.icliniq.network.NetCheck;
@@ -62,15 +60,10 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -674,6 +667,7 @@ public class Consultation3 extends AppCompatActivity {
                             ((android.os.ResultReceiver) getIntent().getParcelableExtra("finisher")).send(1, new Bundle());
 
                             Model.query_launch = "Consult3";
+                            finishAffinity();
                             Intent intent = new Intent(Consultation3.this, Invoice_Page_New.class);
                             intent.putExtra("qid", consult_id);
                             intent.putExtra("inv_id", inv_id);

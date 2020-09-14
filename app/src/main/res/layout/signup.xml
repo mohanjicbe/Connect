@@ -420,10 +420,10 @@ numeric character (0-9), and at least 1 special character"
                     <CheckBox
                         android:id="@+id/check0"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="left"
                         android:gravity="center_vertical"
-                        android:text="Please agree to "
+                        android:text="I agree to "
                         android:textSize="12dp" />
 
                     <TextView
@@ -448,7 +448,7 @@ numeric character (0-9), and at least 1 special character"
                         android:contextClickable="true"
                         android:gravity="center_vertical"
                         android:linksClickable="true"
-                        android:text="terms"
+                        android:text="terms of use "
                         android:textColor="@color/app_color"
                         android:textSize="12dp"
                         android:visibility="visible" />
@@ -462,7 +462,7 @@ numeric character (0-9), and at least 1 special character"
                         android:contextClickable="true"
                         android:gravity="center_vertical"
                         android:linksClickable="true"
-                        android:text="and "
+                        android:text=" and "
                         android:textColor="@color/black"
                         android:textSize="12dp"
                         android:visibility="visible" />
@@ -477,7 +477,7 @@ numeric character (0-9), and at least 1 special character"
                         android:contextClickable="true"
                         android:gravity="center_vertical"
                         android:linksClickable="true"
-                        android:text="policy "
+                        android:text=" privacy policy "
                         android:textColor="@color/app_color"
                         android:textSize="12dp"
                         android:visibility="visible" />
@@ -721,7 +721,7 @@ numeric character (0-9), and at least 1 special character"
                             android:padding="5dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="Please wait. While reading OTP SMS Automatically..."
+                            android:text="Please wait..."
                             android:textColor="@color/blue_900"
                             android:textSize="13sp" />
 
