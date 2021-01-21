@@ -169,13 +169,13 @@ public class MyDoctorsActivity extends BaseActivity implements ObservableScrollV
                 tv_showall_text.setVisibility(View.GONE);
                 Model.select_spec_val = "0";
 
-                //---------------------------------------------
+                //------------------------------------------------------------------
                 /*String Resume_url = "?user_id=" + (Model.id) + "&page=1&speciality=" + (Model.select_spec_val);
                 System.out.println("ShowAll_url----" + Resume_url);*/
                 String mydoc_url = Model.BASE_URL + "sapp/myDoc?user_id=" + (Model.id) + "&page=1&sp_id=0&token=" + Model.token;
                 System.out.println("params---------------" + mydoc_url);
                 new MyTask_server().execute(mydoc_url);
-                //---------------------------------------------
+                //------------------------------------------------------------------
 
             }
         });
